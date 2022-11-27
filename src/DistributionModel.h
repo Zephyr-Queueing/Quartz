@@ -10,6 +10,6 @@ class DistributionModel {
 class Standard : public DistributionModel {
     public:
         tuple<int, int, int> getWeights(int batchSize, tuple<int, int, int> sizes) {
-            return tuple(80, 10, 10);
+            return tuple(0.80 * batchSize, 0.1 * batchSize, 0.1 * batchSize);
         }
 };
