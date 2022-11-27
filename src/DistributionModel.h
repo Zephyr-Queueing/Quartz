@@ -1,3 +1,6 @@
+#ifndef DISTRIBUTION_MODEL_H
+#define DISTRIBUTION_MODEL_H
+
 #include <tuple>
 
 using std::tuple;
@@ -13,3 +16,5 @@ class Standard : public DistributionModel {
             return tuple<double, double, double>(0.80, 0.1, 0.1);
         }
 };
+
+#endif // DISTRIBUTION_MODEL_H

@@ -1,3 +1,6 @@
+#ifndef WEIGHTED_PRIORITY_QUEUE_H
+#define WEIGHTED_PRIORITY_QUEUE_H
+
 #include <list>
 #include <queue>
 #include <Message.h>
@@ -23,3 +26,5 @@ class WeightedPriorityQueue {
     int size();
 
 };
+
+#endif // WEIGHTED_PRIORITY_QUEUE_H
