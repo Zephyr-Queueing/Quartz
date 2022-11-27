@@ -1,17 +1,25 @@
 #include <list>
 #include <queue>
-#include <"DistributionModel.h">
+#include <Message.h>
+
+#include "DistributionModel.h"
 
 using std::list;
 using std::queue;
 
 class WeightedPriorityQueue {
+  public:
     queue<Message> p1;
     queue<Message> p2;
     queue<Message> p3;
-    DistributionModel dm;
+    DistributionModel &dm;
 
-    WeightedPriorityQueue(const DistributionModel &m) : dm(m);
+    WeightedPriorityQueue(DistributionModel &m) : dm(m) {};
+    
+    void enqueue(const Message &msg);
 
     list<Message> dequeueBatch(int batchSize);
-} WeightedPriorityQueue;
+
+    int size();
+
+};
