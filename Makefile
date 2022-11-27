@@ -5,27 +5,20 @@ BDIR=bin
 ODIR=obj
 SDIR=src
 TDIR=test
-LDIR=lib
 
-all: clean mount install $(BDIR)/test package
+all: clean mount install $(BDIR)/main
 
-$(BDIR)/test: $(ODIR)/test.o $(ODIR)/Message.o
-	$(CC) $(CFLAGS) -o $(BDIR)/test $(ODIR)/test.o $(ODIR)/Message.o
+$(BDIR)/main: $(ODIR)/main.o
+	$(CC) $(CFLAGS) -o $(BDIR)/main $(ODIR)/main.o
 
-$(ODIR)/test.o: $(TDIR)/test.cpp $(SDIR)/Message.h
-	$(CC) $(CFLAGS) -o $(ODIR)/test.o -c $(TDIR)/test.cpp
-
-$(ODIR)/Message.o: $(SDIR)/Message.h $(SDIR)/Message.cpp
-	$(CC) $(CFLAGS) -o $(ODIR)/Message.o -c $(SDIR)/Message.cpp
-
-package:
-	ar -rcs $(LDIR)/message.a $(ODIR)/Message.o
+$(ODIR)/main.o: $(SDIR)/main.cpp
+	$(CC) $(CFLAGS) -o $(ODIR)/main.o -c $(SDIR)/main.cpp
 
 install:
 	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.1/message_v1.0.1.a
 
 mount:
-	mkdir $(EDIR) $(BDIR) $(ODIR) $(LDIR)
+	mkdir $(EDIR) $(BDIR) $(ODIR)
 
 clean:
-	rm -rf $(EDIR) $(BDIR) $(ODIR) $(LDIR)
+	rm -rf $(EDIR) $(BDIR) $(ODIR)
