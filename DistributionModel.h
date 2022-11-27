@@ -4,5 +4,5 @@ using std::tuple;
 
 class DistributionModel {
     public:
-        virtual tuple<int, int, int> getWeights(tuple<int, int, int> sizes);
+        virtual tuple<int, int, int> getWeights(int batchSize, tuple<int, int, int> sizes) = 0;
 };
