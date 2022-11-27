@@ -8,10 +8,6 @@ using std::tuple;
 
 pthread_mutex_t lock;
 
-int main(int argc, char** argv) {
-    return EXIT_SUCCESS;
-}
-
 list<Message> dequeueBatch(int batchSize) {
     list<Message> batch;
     pthread_mutex_lock(&lock);
