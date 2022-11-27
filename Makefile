@@ -15,7 +15,8 @@ $(ODIR)/main.o: $(SDIR)/main.cpp
 	$(CC) $(CFLAGS) -o $(ODIR)/main.o -c $(SDIR)/main.cpp
 
 install:
-	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.1/message_v1.0.1.a
+	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.3/message.a; \
+	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.3/Message.h
 
 mount:
 	mkdir $(EDIR) $(BDIR) $(ODIR)
