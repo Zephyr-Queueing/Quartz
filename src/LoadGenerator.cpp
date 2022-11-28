@@ -12,7 +12,7 @@ using namespace std;
 static int randomPriority(uniform_real_distribution<> &unif, mt19937 &gen, const tuple<double, double, double> &dist);
 static Message create(int priority, string data);
 
-void LG::operator()(double rate, tuple<double, double, double> dist, WeightedPriorityQueue &wpq) {
+void LG::operator()() {
     random_device rd;
     mt19937 gen(rd());
     exponential_distribution<> exp(rate);

@@ -7,7 +7,7 @@
 #include "ThreadPool.h"
 #include "Server.h"
 
-#define SERVER_PORT 49842
+#define SERVER_SERVICE "51710"
 #define LOAD_RATE 5.0
 #define LOAD_WEIGHT_ONE 20.0
 #define LOAD_WEIGHT_TWO 10.0
@@ -17,19 +17,13 @@ using namespace std;
 
 int main(int argc, char** argv) {
     ThreadPool threadPool;
-    threadPool.QueueJob([] {
-        cout << "J1" << endl;
-    });
+    Standard standard;
+    WeightedPriorityQueue wpq(standard);
+    tuple<double, double, double> dist({ LOAD_WEIGHT_ONE, LOAD_WEIGHT_TWO, LOAD_WEIGHT_THREE });    
 
-    threadPool.QueueJob([] {
-        cout << "J2" << endl;
-    });
-
-    threadPool.QueueJob([] {
-        cout << "J2" << endl;
-    });
-
-    threadPool.QueueJob(Server(SERVER_PORT));
+    threadPool.QueueJob(LG(LOAD_RATE, dist, ref(wpq)));
+    threadPool.QueueJob(Server(SERVER_SERVICE, ref(wpq)));
+    threadPool.QueueJob(Server(SERVER_SERVICE, ref(wpq)));
 
     threadPool.Start();
 
