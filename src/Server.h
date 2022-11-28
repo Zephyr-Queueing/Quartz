@@ -22,10 +22,10 @@ class Server {
     int Bind();
     int Parse(string data);
     void PrintInfo(int sfd);
-    void SendBatch(int req_batch_size, struct sockaddr *peer_addr);
+    void SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len);
     string Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len, char *host, char *service);
     string service;
-    WeightedPriorityQueue wpq;
+    WeightedPriorityQueue &wpq;
 };
 
 #endif // SERVER_H

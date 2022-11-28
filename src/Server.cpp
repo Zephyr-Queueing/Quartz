@@ -9,6 +9,7 @@
 #include <netdb.h>
 
 #include <Server.h>
+#include <Message.h>
 
 #define BUF_SIZE 1024
 #define SERVER_HOST "localhost"
@@ -30,15 +31,23 @@ void Server::operator()() {
     while (true) {
         data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
         req_batch_size = Parse(data);
-        SendBatch(req_batch_size,  (struct sockaddr *) &peer_addr);
+        SendBatch(sfd, req_batch_size, (struct sockaddr *) &peer_addr, peer_addr_len);
     }
 }
 
-void Server::SendBatch(int req_batch_size, struct sockaddr *peer_addr) {
+void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len) {
     cout << "Sending batch of size: " << req_batch_size << "..." << endl;
-
-
-    // TODO
+    list<Message> batch = wpq.dequeueBatch(req_batch_size);
+    string buf;
+    for (Message msg : batch) {
+        cout << msg.serialize() << endl;
+        buf.append(msg.serialize());
+    }
+    cout << wpq.size() << endl;
+    cout << buf << endl;
+    int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
+    if (n < 0) 
+      cerr << "ERROR in sendto" << endl;
 }
 
 int Server::Parse(string data) {

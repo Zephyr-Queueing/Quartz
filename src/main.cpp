@@ -9,9 +9,9 @@
 
 #define SERVER_SERVICE "51710"
 #define LOAD_RATE 5.0
-#define LOAD_WEIGHT_ONE 20.0
-#define LOAD_WEIGHT_TWO 10.0
-#define LOAD_WEIGHT_THREE 5.0
+#define LOAD_WEIGHT_ONE 0.7
+#define LOAD_WEIGHT_TWO 0.2
+#define LOAD_WEIGHT_THREE 0.1
 
 using namespace std;
 
@@ -19,9 +19,9 @@ int main(int argc, char** argv) {
     ThreadPool threadPool;
     Standard standard;
     WeightedPriorityQueue wpq(standard);
-    tuple<double, double, double> dist({ LOAD_WEIGHT_ONE, LOAD_WEIGHT_TWO, LOAD_WEIGHT_THREE });    
+    tuple<double, double, double> loadDist({ LOAD_WEIGHT_ONE, LOAD_WEIGHT_TWO, LOAD_WEIGHT_THREE });    
 
-    threadPool.QueueJob(LG(LOAD_RATE, dist, ref(wpq)));
+    threadPool.QueueJob(LG(LOAD_RATE, loadDist, ref(wpq)));
     threadPool.QueueJob(Server(SERVER_SERVICE, ref(wpq)));
     threadPool.QueueJob(Server(SERVER_SERVICE, ref(wpq)));
 
