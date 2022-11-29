@@ -14,7 +14,7 @@
 #define SERVER_HOST "localhost"
 #define SERVER_SERVICE "51711"
 #define BUF_SIZE 1024
-#define BATCH_DELIM "\0"
+#define BATCH_DELIM "*"
 
 using namespace std;
 
@@ -45,6 +45,7 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
         buf.append(msg.serialize());
     }
     buf.append(BATCH_DELIM);
+    cout << buf << endl;
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
     if (n < 0) {
         perror("yee");
