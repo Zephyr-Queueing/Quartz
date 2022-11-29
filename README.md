@@ -1,9 +1,14 @@
 # Quartz
 
 ## Usage
-`./run.sh`
+```
+git clone git@github.com:Zephyr-Queueing/Quartz.git
+./run.sh
+```
+Launch script will start server, allowing Isopod worker nodes to connect.
 
 ## Components
  - Load Generator
- - Asyncrhonous Weighted Priority Queue
- - Multithreaded Polling Server
+ - Weighted Priority Queueing System (with JSON elements)
+ - Modular and Modifiable Queue Distribution Model
+ - Multithreaded Server handling Asynchronous Distributed Queue Workers
