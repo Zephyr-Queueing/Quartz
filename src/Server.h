@@ -15,7 +15,7 @@ using namespace std;
 
 class Server {
   public:
-    Server(string s, WeightedPriorityQueue &w) : service(s), wpq(w) {}
+    Server(WeightedPriorityQueue &w) : wpq(w) {}
     void operator()();
 
   private:
@@ -24,7 +24,6 @@ class Server {
     void PrintInfo(int sfd);
     void SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len);
     string Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len, char *host, char *service);
-    string service;
     WeightedPriorityQueue &wpq;
 };
 

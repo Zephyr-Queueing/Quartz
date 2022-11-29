@@ -12,11 +12,6 @@ using std::queue;
 
 class WeightedPriorityQueue {
   public:
-    queue<Message> p1;
-    queue<Message> p2;
-    queue<Message> p3;
-    DistributionModel &dm;
-
     WeightedPriorityQueue(DistributionModel &m) : dm(m) {};
     
     void enqueue(const Message &msg);
@@ -24,6 +19,12 @@ class WeightedPriorityQueue {
     list<Message> dequeueBatch(int batchSize);
 
     int size();
+
+  private:
+    queue<Message> p1;
+    queue<Message> p2;
+    queue<Message> p3;
+    DistributionModel &dm;
 
 };
 

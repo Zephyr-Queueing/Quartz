@@ -23,7 +23,7 @@ void LG::operator()() {
         int p = randomPriority(unif, gen, dist);
         Message msg(create(p, "mydata"));
         wpq.enqueue(msg);
-        cout << "Enqueuing > " << msg.serialize() << endl;
+        //cout << "Enqueuing > " << msg.serialize() << endl;
     }
 }
 

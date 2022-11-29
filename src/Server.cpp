@@ -11,20 +11,22 @@
 #include <Server.h>
 #include <Message.h>
 
-#define BUF_SIZE 1024
 #define SERVER_HOST "localhost"
+#define SERVER_SERVICE "51711"
+#define BUF_SIZE 1024
+#define BATCH_DELIM "\0"
 
 using namespace std;
 
 void Server::operator()() {
-    int sfd;                                    // server socket
-    struct sockaddr_storage peer_addr;          // peer addr info
-    socklen_t peer_addr_len;                    // peer addr length
-    char peer_host[NI_MAXHOST],                 // peer host/service information
+    int sfd;
+    struct sockaddr_storage peer_addr;
+    socklen_t peer_addr_len = sizeof(struct sockaddr_storage);                    
+    char peer_host[NI_MAXHOST],                
          peer_service[NI_MAXSERV]; 
     
     sfd = Bind();
-    PrintInfo(sfd);
+    // PrintInfo(sfd);
     
     string data;
     int req_batch_size;
@@ -40,20 +42,25 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
     list<Message> batch = wpq.dequeueBatch(req_batch_size);
     string buf;
     for (Message msg : batch) {
-        cout << msg.serialize() << endl;
         buf.append(msg.serialize());
     }
-    cout << wpq.size() << endl;
-    cout << buf << endl;
+    buf.append(BATCH_DELIM);
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
-    if (n < 0) 
-      cerr << "ERROR in sendto" << endl;
+    if (n < 0) {
+        perror("yee");
+        cerr << "ERROR in sendto" << endl;
+    }
 }
 
 int Server::Parse(string data) {
-    cout << "Parsing data: " << data << endl;
-    // TODO
-    return 15;
+    cout << "Received... " << data << endl;
+    int batchSize;
+    try {
+        batchSize = stoi(data);
+    } catch (...) {
+        cout << "Ignoring invalid data." << endl;
+    }
+    return batchSize;
 }
 
 string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len,
@@ -74,22 +81,22 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
 }
 
 void Server::PrintInfo(int sfd) {
-    struct sockaddr_in serv_addr;
+    struct sockaddr_in6 serv_addr;
     socklen_t serv_addr_len = sizeof(serv_addr);
     if (getsockname(sfd, (struct sockaddr*) &serv_addr, &serv_addr_len) == -1) {
         perror("getsockname");
         return;
     }
-    cout << "Server listening on port: " << ntohs(serv_addr.sin_port) << endl;
+    cout << "Server listening on port: " << ntohs(serv_addr.sin6_port) << endl;
 }
 
 int Server::Bind() {
-    int sfd, s;
+    int sfd, s, optval = 1;
     struct addrinfo hints;
     struct addrinfo *result, *rp;
 
     memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = 0;
+    hints.ai_family = AF_INET6;
     hints.ai_socktype = SOCK_DGRAM;
     hints.ai_flags = AI_PASSIVE;
     hints.ai_protocol = 0;
@@ -97,7 +104,7 @@ int Server::Bind() {
     hints.ai_addr = NULL;
     hints.ai_next = NULL;
 
-    s = getaddrinfo(SERVER_HOST, service.c_str(), &hints, &result);
+    s = getaddrinfo(SERVER_HOST, SERVER_SERVICE, &hints, &result);
     if (s != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
         exit(EXIT_FAILURE);
@@ -107,8 +114,12 @@ int Server::Bind() {
         sfd = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
         if (sfd == -1)
             continue;
+
+        setsockopt(sfd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval));
+
         if (bind(sfd, rp->ai_addr, rp->ai_addrlen) == 0)
             break;
+
         close(sfd);
     }
 

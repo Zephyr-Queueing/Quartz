@@ -3,46 +3,36 @@
 
 #include <tuple>
 
-#define dw1 0.80
-#define dw2 0.10
-#define dw3 0.10
+#define DW1 0.8
+#define DW2 0.1
+#define DW3 0.1
 
 using std::tuple;
 
 class DistributionModel {
-    public:
-        virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes) = 0;
+  public:
+    DistributionModel() : dw1(DW1), dw2(DW2), dw3(DW3) {};
+    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes) = 0;
+    virtual ~DistributionModel() {};
+
+  protected:
+    double dw1;
+    double dw2;
+    double dw3;
 };
 
 class Standard : public DistributionModel {
-    public:
-        tuple<double, double, double> getWeights(tuple<int, int, int> sizes) {
-            return tuple<double, double, double>(dw1, dw2, dw3);
-        }
+  public:
+    Standard() = default;
+    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes);
+    virtual ~Standard() {};
 };
 
 class Zephyr : public DistributionModel {
-    public:
-        tuple<double, double, double> getWeights(tuple<int, int, int> sizes) {
-            bool o1 = true;  // determine if queue is stressed
-            bool o2 = true;
-            bool o3 = true;
-            if ((o1 and !o2 and !o3) or (!o1 and o2 and !o3) or (!o1 and !o2 and o3)) {
-                if (o1) {
-                    return tuple<double, double, double>(dw1, dw2, dw3);
-                } else if (o2) {
-                    return tuple<double, double, double>(dw1, dw2, dw3);
-                } else {
-                    return tuple<double, double, double>(dw1, dw2, dw3);
-                }
-            } else if ((o1 and !o2 and o3) or (o1 and o2 and !o3)) {
-                return tuple<double, double, double>(dw1, dw2, dw3);
-
-            } else if ((!o1 and o2 and o3)) {
-                return tuple<double, double, double>(dw1, dw2, dw3);
-            }
-            return tuple<double, double, double>(dw1, dw2, dw3);
-        }
+  public:
+    Zephyr() = default;
+    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes);
+    virtual ~Zephyr() {};
 };
 
 #endif // DISTRIBUTION_MODEL_H

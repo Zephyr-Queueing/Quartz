@@ -1,3 +1,4 @@
+#include <iostream>
 #include <mutex>
 #include <condition_variable>
 #include <vector>
@@ -53,7 +54,7 @@ bool ThreadPool::Busy() {
     return poolbusy;
 }
 
-void ThreadPool::Stop() {
+ThreadPool::~ThreadPool() {
     {
         unique_lock<std::mutex> lock(queue_mutex);
         should_terminate = true;

@@ -11,8 +11,8 @@ class ThreadPool {
   public:
     void Start();
     void QueueJob(const function<void()>& job);
-    void Stop();
     bool Busy();
+    ~ThreadPool();
 
   private:
     static void ThreadLoop(ThreadPool *threadPool);
