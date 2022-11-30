@@ -16,14 +16,13 @@ void LG::operator()() {
     random_device rd;
     mt19937 gen(rd());
     exponential_distribution<> exp(rate);
-    uniform_real_distribution<> unif(0, static_cast<int>(get<0>(dist) + get<1>(dist) + get<2>(dist)));
+    uniform_real_distribution<> unif(0, 1);
 
     while (wpq.size() < 100000) {
-        this_thread::sleep_for(chrono::milliseconds(static_cast<int>(exp(gen))));
+        this_thread::sleep_for(chrono::seconds(static_cast<int>(exp(gen))));
         int p = randomPriority(unif, gen, dist);
         Message msg(create(p, "mydata"));
         wpq.enqueue(msg);
-        //cout << "Enqueuing > " << msg.serialize() << endl;
     }
 }
 
@@ -31,7 +30,7 @@ static int randomPriority(uniform_real_distribution<> &unif, mt19937 &gen, const
     double n = unif(gen);
     if (n <= get<0>(dist))
         return 1;
-    if (n <= get<1>(dist))
+    if (n <= get<0>(dist) + get<1>(dist))
         return 2;
     return 3;
 }

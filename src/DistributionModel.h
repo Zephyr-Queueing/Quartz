@@ -13,9 +13,9 @@
 #define DW3 0.1
 
 using std::tuple;
-using chrono::milliseconds;
 
 using namespace std;
+using namespace chrono;
 
 class DistributionModel {
   public:
@@ -46,9 +46,13 @@ class Zephyr : public DistributionModel {
     virtual ~Zephyr() {};
   
   private:
-    double Zephyr::estimateSpareWeight(int qid, tuple<int, int, int> &sizes);
+    void captureNow();
+    void refreshAllMovingSums();
+    void refreshQueueMovingSums(int qid);
+    double estimateSpareWeight(int qid, tuple<int, int, int> &sizes);
     map<int, tuple<int, int, int>> movingSums; // qid -> least-recent history idx, moving enqueue sum, moving dequeue sum
     map<int, vector<tuple<milliseconds, int>>> history;
+    milliseconds now;
 };
 
 #endif // DISTRIBUTION_MODEL_H

@@ -11,7 +11,7 @@
 #define NUM_SERVERS 16
 #define QUARTZ_LIFESPAN 60 * 60 * 24
 
-#define LOAD_RATE 5.0
+#define LOAD_RATE 0.3
 #define LOAD_WEIGHT_ONE 0.7
 #define LOAD_WEIGHT_TWO 0.2
 #define LOAD_WEIGHT_THREE 0.1
@@ -26,12 +26,14 @@ static void PrintStats();
 
 int main(int argc, char** argv) {
     double loadRate, loadWeight1, loadWeight2, loadWeight3;
-    ThreadPool threadPool;
-    Standard standard;
-    WeightedPriorityQueue wpq(standard);
-    tuple<double, double, double> loadDist({ loadWeight1, loadWeight2, loadWeight3 });   
-
     ParseArgs(argc, argv, &loadRate, &loadWeight1, &loadWeight2, &loadWeight3); 
+
+    ThreadPool threadPool;
+    // Standard standard;
+    // WeightedPriorityQueue wpq(standard);
+    Zephyr zephyr;
+    WeightedPriorityQueue wpq(zephyr);
+    tuple<double, double, double> loadDist(loadWeight1, loadWeight2, loadWeight3);   
 
     threadPool.QueueJob(LG(loadRate, loadDist, wpq));
     for (int i = 0; i < NUM_SERVERS; i++)
@@ -53,10 +55,10 @@ static void ParseArgs(int argc, char** argv,
     }
 
     try {
-        *loadRate = stoi(argv[2]);
-        *loadWeight1 = stoi(argv[4]);
-        *loadWeight2 = stoi(argv[6]);
-        *loadWeight3 = stoi(argv[8]);
+        *loadRate = stod(argv[2]);
+        *loadWeight1 = stod(argv[4]);
+        *loadWeight2 = stod(argv[6]);
+        *loadWeight3 = stod(argv[8]);
     } catch (...) {
         Usage(argv[0]);
     }
