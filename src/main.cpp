@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     ParseArgs(argc, argv, &loadRate, &loadWeight1, &loadWeight2, &loadWeight3); 
     cout << "Load Rate and Load Weights: "
          << loadRate << " => (" << loadWeight1 << ", " << loadWeight2
-         << ", " << loadWeight3 << endl; 
+         << ", " << loadWeight3 << ")" << endl; 
 
     ThreadPool threadPool;
     // Standard standard;

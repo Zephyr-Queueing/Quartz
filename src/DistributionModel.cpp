@@ -5,11 +5,18 @@
 #include <chrono>
 #include <thread>
 #include <assert.h>
-
 #include <DistributionModel.h>
 
+// #define DEBUG
+#define MSG_THRESHOLD 2
 #define MAX_WINDOW 5000 // ms
 #define MAX_Q_DELAY 500 // ms
+
+#ifdef DEBUG 
+#define DEBUG_BUILD(x) x
+#else 
+#define DEBUG_BUILD(x)
+#endif
 
 using std::tuple;
 using chrono::milliseconds;
@@ -18,6 +25,7 @@ using namespace std;
 
 static int getQueueSize(int qid, tuple<int, int, int> &sizes);
 static double getQueueWeight(int qid);
+static void normalizeWeights(tuple<double, double, double> &dws);
 
 // Standard
 
@@ -39,29 +47,35 @@ Zephyr::Zephyr() {
 }
 
 tuple<double, double, double> Zephyr::getWeights(tuple<int, int, int> sizes) {
-    cout << "now: " << now.count() << endl;
     tuple<double, double, double> dws(dw1, dw2, dw3);
-    if (history[0].size() < 10)
+    if (history[0].size() < MSG_THRESHOLD ||
+        history[1].size() < MSG_THRESHOLD ||
+        history[2].size() < MSG_THRESHOLD) {
         return dws;
-
-    // captureNow();
+    }
     refreshAllMovingSums();
-    // cout << "getWeights()" << endl;
     double o1Spare = estimateSpareWeight(1, sizes);
     double o2Spare = estimateSpareWeight(2, sizes);
     double o3Spare = estimateSpareWeight(3, sizes);
     double totSpare = o1Spare + o2Spare + o3Spare;
+    // cout << o1Spare << ", " << o2Spare << ", " << o3Spare << endl;
     int numStressed = int(o1Spare > 0.0) + int(o2Spare > 0.0) + int(o3Spare > 0.0);
     if (numStressed != 0) {
         get<0>(dws) += totSpare / 3.0 - o1Spare;
         get<1>(dws) += totSpare / 3.0 - o2Spare;
         get<2>(dws) += totSpare / 3.0 - o3Spare;
     }
+    normalizeWeights(dws);
+    cout << "Weights: " << get<0>(dws) << ", " << get<1>(dws) << ", " << get<2>(dws) << endl; 
+    DEBUG_BUILD(
+        cout << "Queue 1 > Size: " << get<0>(sizes) << "\tSpare Weight: " << o1Spare << endl;
+        cout << "Queue 2 > Size: " << get<1>(sizes) << "\tSpare Weight: " << o2Spare << endl;
+        cout << "Queue 3 > Size: " << get<2>(sizes) << "\tSpare Weight: " << o3Spare << endl;
+    )
     return dws;
 }
 
 void Zephyr::notify(int qid, int delta) {
-    cout << qid << " " << delta << endl;
     captureNow();
     vector<tuple<milliseconds, int>> &qhist = history[qid];
     tuple<int, int, int> &p = movingSums[qid];
@@ -74,8 +88,9 @@ void Zephyr::notify(int qid, int delta) {
 // enqueueRate * spareWeight = netThroughput => netThroughput = 0
 double Zephyr::estimateSpareWeight(int qid, tuple<int, int, int> &sizes) {
     tuple<int, int, int> &ms = movingSums[qid - 1];
-    int64_t win = MAX_WINDOW; // (now - get<0>(history[qid][get<0>(ms)])).count();
-    // assert(win <= MAX_WINDOW);
+    vector<tuple<milliseconds, int>> &qhist = history[qid];
+    int64_t win = MAX_WINDOW;
+    assert(win <= MAX_WINDOW);
     double enqueueRate = (double) get<1>(ms) / win;
     double dequeueRate = (double) get<2>(ms) / win;
     double netThroughput = dequeueRate - enqueueRate;
@@ -86,23 +101,31 @@ double Zephyr::estimateSpareWeight(int qid, tuple<int, int, int> &sizes) {
         drainDelay = (double) getQueueSize(qid, sizes) / netThroughput;
     else
         drainDelay = std::numeric_limits<double>::infinity();
-    cout << now.count() << ",\t"
-         << qid << ",\t"
-         << getQueueSize(qid, sizes) << ",\t" 
-         << (double) get<1>(ms) << ",\t"
-         << (double) get<2>(ms) << ",\t"
-         << netThroughput << ",\t"
-         << drainDelay << ",\t"
-         << history[qid - 1].size() << ",\t"
-         << (double) get<0>(ms) << ",\t"
-         << (double) get<1>(ms) << ",\t"
-         << (double) get<2>(ms) << endl;
-         //<< (double) get<2>(ms) << ",\t"
-         //<< win << ",\t"
-         //<< netThroughput << endl;
-    if (netThroughput <= 0 || drainDelay > MAX_Q_DELAY) { // stressed
+
+    DEBUG_BUILD(
+        cout << "time (unix)"<< ",\t\t"
+            << "queue id" << ",\t\t"
+            << "queue size" << ",\t\t" 
+            << "enqeue sum" << ",\t\t"
+            << "deqeue sum" << ",\t\t"
+            << "net throughput" << ",\t\t"
+            << "drain delay" << endl;
+        cout << now.count() << ",\t\t"
+            << qid << ",\t\t"
+            << getQueueSize(qid, sizes) << ",\t\t" 
+            << (double) get<1>(ms) << ",\t\t"
+            << (double) get<2>(ms) << ",\t\t"
+            << netThroughput << ",\t\t"
+            << drainDelay << endl;
+    )
+
+    // Return no spare weight if stressed.
+    if (netThroughput <= 0 || drainDelay > MAX_Q_DELAY) {
         return 0.0;
     }
+
+    // Return well-behaved spare weight.
+    enqueueRate = max(0.001, enqueueRate);
     return netThroughput / enqueueRate;
 }
 
@@ -113,24 +136,16 @@ void Zephyr::refreshAllMovingSums() {
 }
 
 void Zephyr::refreshQueueMovingSums(int qid) {
-    //cout << "most recent qhist time:" << get<0>(history[qid][history[qid].size() - 1]).count() << endl;
-    cout << "nowr: " << now.count() << endl;
-    //cout << "diff: " << now.count() - get<0>(history[qid][history[qid].size() - 1]).count() << endl;
     int64_t low = now.count() - MAX_WINDOW;
     tuple<int, int, int> &p = movingSums[qid];
     int ndelta;
-    // for (auto i : history[qid])
-    //     cout << get<0>(i).count() << endl;
     while (get<0>(p) < history[qid].size() - 1 && get<0>(history[qid][get<0>(p)]).count() < low) {
-        // cout << now.count() << " " << " " << get<0>(history[qid][get<0>(p)]).count() << " " << low  << endl;
         ndelta = get<1>(history[qid][++(get<0>(p))]);
         if (ndelta > 0) // enqueue
             get<1>(p) -= ndelta;
         else            // dequeue
             get<2>(p) += ndelta;
     }
-    cout << "indices in" << qid << " ms: " << history[qid].size() - get<0>(p) << endl;
-    // cout << "q" << qid << " moving sums: " << get<1>(p) << " " << get<2>(p) << endl;
 }
 
 void Zephyr::captureNow() {
@@ -161,4 +176,22 @@ static double getQueueWeight(int qid) {
         default:
             return -1.0;
     }
+}
+
+static void normalizeWeights(tuple<double, double, double> &dws) {
+    double m = get<0>(dws);
+    m = min(m, get<1>(dws));
+    m = min(m, get<2>(dws));
+
+    if (m < 0) {
+        get<0>(dws) -= m;
+        get<1>(dws) -= m;
+        get<2>(dws) -= m;
+    }
+
+    double tot = get<0>(dws) + get<1>(dws) + get<2>(dws);
+    // cout << tot << endl;
+    get<0>(dws) /= tot;
+    get<1>(dws) /= tot;
+    get<2>(dws) /= tot;
 }
