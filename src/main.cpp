@@ -27,6 +27,9 @@ static void PrintStats();
 int main(int argc, char** argv) {
     double loadRate, loadWeight1, loadWeight2, loadWeight3;
     ParseArgs(argc, argv, &loadRate, &loadWeight1, &loadWeight2, &loadWeight3); 
+    cout << "Load Rate and Load Weights: "
+         << loadRate << " => (" << loadWeight1 << ", " << loadWeight2
+         << ", " << loadWeight3 << endl; 
 
     ThreadPool threadPool;
     // Standard standard;

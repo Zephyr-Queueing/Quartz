@@ -8,7 +8,7 @@
 
 #include <DistributionModel.h>
 
-#define MAX_WINDOW 1000 // ms
+#define MAX_WINDOW 5000 // ms
 #define MAX_Q_DELAY 500 // ms
 
 using std::tuple;
@@ -39,14 +39,19 @@ Zephyr::Zephyr() {
 }
 
 tuple<double, double, double> Zephyr::getWeights(tuple<int, int, int> sizes) {
-    captureNow();
+    cout << "now: " << now.count() << endl;
+    tuple<double, double, double> dws(dw1, dw2, dw3);
+    if (history[0].size() < 10)
+        return dws;
+
+    // captureNow();
     refreshAllMovingSums();
-    double o1Spare = estimateSpareWeight(0, sizes);
-    double o2Spare = estimateSpareWeight(1, sizes);
-    double o3Spare = estimateSpareWeight(2, sizes);
+    // cout << "getWeights()" << endl;
+    double o1Spare = estimateSpareWeight(1, sizes);
+    double o2Spare = estimateSpareWeight(2, sizes);
+    double o3Spare = estimateSpareWeight(3, sizes);
     double totSpare = o1Spare + o2Spare + o3Spare;
     int numStressed = int(o1Spare > 0.0) + int(o2Spare > 0.0) + int(o3Spare > 0.0);
-    tuple<double, double, double> dws(dw1, dw2, dw3);
     if (numStressed != 0) {
         get<0>(dws) += totSpare / 3.0 - o1Spare;
         get<1>(dws) += totSpare / 3.0 - o2Spare;
@@ -56,7 +61,7 @@ tuple<double, double, double> Zephyr::getWeights(tuple<int, int, int> sizes) {
 }
 
 void Zephyr::notify(int qid, int delta) {
-    cout << "notify " << qid << " " << delta << endl;
+    cout << qid << " " << delta << endl;
     captureNow();
     vector<tuple<milliseconds, int>> &qhist = history[qid];
     tuple<int, int, int> &p = movingSums[qid];
@@ -68,13 +73,33 @@ void Zephyr::notify(int qid, int delta) {
 // drainRate > 0 && drainDelay <= MAX_Q_DELAY -> can rebalance weights s.t. drainRate becomes 0
 // enqueueRate * spareWeight = netThroughput => netThroughput = 0
 double Zephyr::estimateSpareWeight(int qid, tuple<int, int, int> &sizes) {
-    tuple<int, int, int> &ms = movingSums[qid];
-    int64_t win = MAX_WINDOW; //(now - get<0>(history[qid][get<0>(ms)])).count();
-    assert(win <= MAX_WINDOW);
+    tuple<int, int, int> &ms = movingSums[qid - 1];
+    int64_t win = MAX_WINDOW; // (now - get<0>(history[qid][get<0>(ms)])).count();
+    // assert(win <= MAX_WINDOW);
     double enqueueRate = (double) get<1>(ms) / win;
     double dequeueRate = (double) get<2>(ms) / win;
     double netThroughput = dequeueRate - enqueueRate;
-    double drainDelay = getQueueSize(qid, sizes) / netThroughput;
+
+    // Compute drain delay.
+    double drainDelay;
+    if (netThroughput > 0)
+        drainDelay = (double) getQueueSize(qid, sizes) / netThroughput;
+    else
+        drainDelay = std::numeric_limits<double>::infinity();
+    cout << now.count() << ",\t"
+         << qid << ",\t"
+         << getQueueSize(qid, sizes) << ",\t" 
+         << (double) get<1>(ms) << ",\t"
+         << (double) get<2>(ms) << ",\t"
+         << netThroughput << ",\t"
+         << drainDelay << ",\t"
+         << history[qid - 1].size() << ",\t"
+         << (double) get<0>(ms) << ",\t"
+         << (double) get<1>(ms) << ",\t"
+         << (double) get<2>(ms) << endl;
+         //<< (double) get<2>(ms) << ",\t"
+         //<< win << ",\t"
+         //<< netThroughput << endl;
     if (netThroughput <= 0 || drainDelay > MAX_Q_DELAY) { // stressed
         return 0.0;
     }
@@ -88,17 +113,24 @@ void Zephyr::refreshAllMovingSums() {
 }
 
 void Zephyr::refreshQueueMovingSums(int qid) {
-    milliseconds low = now - milliseconds(MAX_WINDOW);
+    //cout << "most recent qhist time:" << get<0>(history[qid][history[qid].size() - 1]).count() << endl;
+    cout << "nowr: " << now.count() << endl;
+    //cout << "diff: " << now.count() - get<0>(history[qid][history[qid].size() - 1]).count() << endl;
+    int64_t low = now.count() - MAX_WINDOW;
     tuple<int, int, int> &p = movingSums[qid];
     int ndelta;
-    while (get<0>(p) < history[qid].size() - 1 && get<0>(history[qid][get<0>(p)]) < low) {
+    // for (auto i : history[qid])
+    //     cout << get<0>(i).count() << endl;
+    while (get<0>(p) < history[qid].size() - 1 && get<0>(history[qid][get<0>(p)]).count() < low) {
+        // cout << now.count() << " " << " " << get<0>(history[qid][get<0>(p)]).count() << " " << low  << endl;
         ndelta = get<1>(history[qid][++(get<0>(p))]);
         if (ndelta > 0) // enqueue
             get<1>(p) -= ndelta;
         else            // dequeue
             get<2>(p) += ndelta;
     }
-    cout << "q" << qid << " moving sums: " << get<1>(p) << " " << get<2>(p) << endl;
+    cout << "indices in" << qid << " ms: " << history[qid].size() - get<0>(p) << endl;
+    // cout << "q" << qid << " moving sums: " << get<1>(p) << " " << get<2>(p) << endl;
 }
 
 void Zephyr::captureNow() {

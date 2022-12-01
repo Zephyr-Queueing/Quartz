@@ -38,14 +38,14 @@ void Server::operator()() {
 }
 
 void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len) {
-    cout << "Sending batch of size: " << req_batch_size << "..." << endl;
+    // cout << "Sending batch of size: " << req_batch_size << "..." << endl;
     list<Message> batch = wpq.dequeueBatch(req_batch_size);
     string buf;
     for (Message msg : batch) {
         buf.append(msg.serialize());
     }
     buf.append(BATCH_DELIM);
-    cout << buf << endl;
+    // cout << buf << endl;
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
     if (n < 0) {
         perror("yee");
@@ -54,7 +54,7 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
 }
 
 int Server::Parse(string data) {
-    cout << "Received... " << data << endl;
+    // cout << "Received... " << data << endl;
     int batchSize;
     try {
         batchSize = stoi(data);
