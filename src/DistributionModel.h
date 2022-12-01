@@ -20,7 +20,7 @@ using namespace chrono;
 class DistributionModel {
   public:
     DistributionModel() : dw1(DW1), dw2(DW2), dw3(DW3) {};
-    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes) = 0;
+    virtual tuple<double, double, double> getWeights(const tuple<int, int, int> &sizes) = 0;
     virtual void notify(int qid, int delta) = 0;
     virtual ~DistributionModel() {};
 
@@ -33,7 +33,7 @@ class DistributionModel {
 class Standard : public DistributionModel {
   public:
     Standard() = default;
-    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes);
+    virtual tuple<double, double, double> getWeights(const tuple<int, int, int> &sizes);
     virtual void notify(int qid, int delta);
     virtual ~Standard() {};
 };
@@ -42,14 +42,14 @@ class Zephyr : public DistributionModel {
   public:
     Zephyr();
     virtual void notify(int qid, int delta);
-    virtual tuple<double, double, double> getWeights(tuple<int, int, int> sizes);
+    virtual tuple<double, double, double> getWeights(const tuple<int, int, int> &sizes);
     virtual ~Zephyr() {};
   
   private:
     void captureNow();
     void refreshAllMovingSums();
     void refreshQueueMovingSums(int qid);
-    double estimateSpareWeight(int qid, tuple<int, int, int> &sizes);
+    double estimateSpareWeight(int qid, const tuple<int, int, int> &sizes);
     map<int, tuple<int, int, int>> movingSums; // qid -> least-recent history idx, moving enqueue sum, moving dequeue sum
     map<int, vector<tuple<milliseconds, int>>> history;
     milliseconds now;
