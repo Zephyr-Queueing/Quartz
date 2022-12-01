@@ -3,6 +3,7 @@
 ## Usage
 ```
 git clone git@github.com:Zephyr-Queueing/Quartz.git
+cd Quartz
 ./run.sh
 ```
 Launch script will start server, allowing Isopod worker nodes to connect.
