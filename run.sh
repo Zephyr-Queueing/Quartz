@@ -6,7 +6,11 @@ if [ $# -ne 0 ]; then
 fi
 
 echo "Preparing..."
-make > /dev/null 2>&1
-echo "Hostname: $HOSTNAME"
+make
+echo ""
+echo "..."
+echo ""
+echo "Hostname: "
+hostname
 echo "Executing Quartz"
 ./bin/main -r 100 -lw1 0.7 -lw2 0.2 -lw3 0.1
