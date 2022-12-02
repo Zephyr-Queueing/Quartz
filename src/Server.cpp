@@ -7,17 +7,16 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <netdb.h>
-#include <boost/asio.hpp>
 
 #include <Server.h>
 #include <Message.h>
 
-#define SERVER_SERVICE "51711"
+#define HOSTNAME "localhost"
+#define PORT "51711"
 #define BUF_SIZE 1024
 #define BATCH_DELIM "*"
 
 using namespace std;
-namespace ip = boost::asio::ip;
 
 void Server::operator()() {
     int sfd;
@@ -106,10 +105,7 @@ int Server::Bind() {
     hints.ai_addr = NULL;
     hints.ai_next = NULL;
 
-    boost::asio::io_service io_service;
-    string hostname = ip::host_name().c_str();
-    cout << "Hostname: " << hostname << endl;
-    s = getaddrinfo(hostname.c_str(), SERVER_SERVICE, &hints, &result);
+    s = getaddrinfo(HOSTNAME, PORT, &hints, &result);
     if (s != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
         exit(EXIT_FAILURE);
