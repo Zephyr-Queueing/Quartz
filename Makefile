@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-std=c++11 -Iext -Isrc -Lext/message_v1.0.1.a
+CFLAGS=-std=c++11 -Iext -Isrc -pthread -Lext/message_2.a
 EDIR=ext
 BDIR=bin
 ODIR=obj
@@ -9,7 +9,7 @@ TDIR=test
 all: clean mount install $(BDIR)/main
 
 $(BDIR)/main: $(ODIR)/main.o $(ODIR)/WeightedPriorityQueue.o $(ODIR)/LoadGenerator.o $(ODIR)/ThreadPool.o $(ODIR)/Server.o $(ODIR)/DistributionModel.o
-	$(CC) $(CFLAGS) -o $(BDIR)/main $(ODIR)/main.o $(ODIR)/WeightedPriorityQueue.o $(ODIR)/LoadGenerator.o $(ODIR)/ThreadPool.o $(ODIR)/Server.o $(ODIR)/DistributionModel.o $(EDIR)/message.a
+	$(CC) $(CFLAGS) -o $(BDIR)/main $(ODIR)/main.o $(ODIR)/WeightedPriorityQueue.o $(ODIR)/LoadGenerator.o $(ODIR)/ThreadPool.o $(ODIR)/Server.o $(ODIR)/DistributionModel.o $(EDIR)/message_2.a
 
 $(ODIR)/main.o: $(SDIR)/main.cpp
 	$(CC) $(CFLAGS) -o $(ODIR)/main.o -c $(SDIR)/main.cpp
@@ -30,7 +30,7 @@ $(ODIR)/DistributionModel.o: $(SDIR)/DistributionModel.cpp $(SDIR)/DistributionM
 	$(CC) $(CFLAGS) -o $(ODIR)/DistributionModel.o -c $(SDIR)/DistributionModel.cpp
 
 install:
-	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.4/message.a; \
+	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/gcc-7.5-release/message_2.a; \
 	wget -P $(EDIR) https://github.com/Zephyr-Queueing/Quartz-Model/releases/download/v1.0.4/Message.h
 
 mount:
