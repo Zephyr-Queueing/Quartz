@@ -194,14 +194,17 @@ static double getQueueWeight(int qid) {
 }
 
 static void normalizeWeights(tuple<double, double, double> &dws) {
-    double m = get<0>(dws);
-    m = min(m, get<1>(dws));
-    m = min(m, get<2>(dws));
-    if (m < 0) {
-        get<0>(dws) -= m;
-        get<1>(dws) -= m;
-        get<2>(dws) -= m;
-    }
+    get<0>(dws) = max(0.0, get<0>(dws));
+    get<1>(dws) = max(0.0, get<1>(dws));
+    get<2>(dws) = max(0.0, get<2>(dws));
+    // double m = get<0>(dws);
+    // m = min(m, get<1>(dws));
+    // m = min(m, get<2>(dws));
+    // if (m < 0) {
+    //     get<0>(dws) -= m;
+    //     get<1>(dws) -= m;
+    //     get<2>(dws) -= m;
+    // }
     double tot = get<0>(dws) + get<1>(dws) + get<2>(dws);
     get<0>(dws) /= tot;
     get<1>(dws) /= tot;
