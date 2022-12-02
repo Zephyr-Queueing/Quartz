@@ -82,15 +82,15 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
     return string(buf);
 }
 
-void Server::PrintInfo(int sfd) {
-    struct sockaddr_in6 serv_addr;
-    socklen_t serv_addr_len = sizeof(serv_addr);
-    if (getsockname(sfd, (struct sockaddr*) &serv_addr, &serv_addr_len) == -1) {
-        perror("getsockname");
-        return;
-    }
-    cout << "Server listening on port: " << ntohs(serv_addr.sin6_port) << endl;
-}
+// void Server::PrintInfo(int sfd) {
+//     struct sockaddr_in6 serv_addr;
+//     socklen_t serv_addr_len = sizeof(serv_addr);
+//     if (getsockname(sfd, (struct sockaddr*) &serv_addr, &serv_addr_len) == -1) {
+//         perror("getsockname");
+//         return;
+//     }
+//     cout << "Server listening on port: " << ntohs(serv_addr.sin6_port) << endl;
+// }
 
 int Server::Bind() {
     int sfd, s, optval = 1;
@@ -98,7 +98,7 @@ int Server::Bind() {
     struct addrinfo *result, *rp;
 
     memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = AF_INET6;
+    hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_DGRAM;
     hints.ai_flags = AI_PASSIVE;
     hints.ai_protocol = 0;
