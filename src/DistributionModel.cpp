@@ -10,13 +10,15 @@
 #define DEBUG
 #define STARTUP_MSG_THRESHOLD 2
 #define MAX_WINDOW 5000 // ms
-#define MAX_Q_DELAY 500 // ms
+#define MAX_Q_DELAY 2000 // ms
 
 #ifdef DEBUG 
 #define DEBUG_BUILD(x) x
 #else 
 #define DEBUG_BUILD(x)
 #endif
+
+#define SAFE_SUB(x, y) (x - y == 0 ? 0.001 : x - y)
 
 using std::tuple;
 using chrono::milliseconds;
@@ -102,7 +104,7 @@ double Zephyr::estimateSpareWeight(int qid, const tuple<int, int, int> &sizes) {
     // Compute net queue throughput.
     double enqueueRate = (double) get<1>(ms) / MAX_WINDOW;
     double dequeueRate = (double) get<2>(ms) / MAX_WINDOW;
-    double netThroughput = dequeueRate - enqueueRate;
+    double netThroughput = SAFE_SUB(dequeueRate, enqueueRate);
 
     // Compute drain delay.
     double drainDelay;

@@ -18,8 +18,8 @@ void LG::operator()() {
     exponential_distribution<> exp(rate);
     uniform_real_distribution<> unif(0, 1);
 
-    while (wpq.size() < 100000) {
-        this_thread::sleep_for(chrono::seconds(static_cast<int>(exp(gen))));
+    while (true) {
+        this_thread::sleep_for(chrono::milliseconds(static_cast<int>(1000 * exp(gen))));
         int p = randomPriority(unif, gen, dist);
         Message msg(create(p, "mydata"));
         wpq.enqueue(msg);
