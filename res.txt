@@ -1,0 +1,1904 @@
+Preparing...
+Hostname: attu2.cs.washington.edu
+Executing Quartz
+Load Rate and Load Weights: 100 => (0.7, 0.2, 0.1)
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739780,		1,		189,		189,		0,		-0.0378,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739780,		2,		61,		61,		0,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739780,		3,		27,		27,		0,		-0.0054,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 189	Spare Weight: 0
+Queue 2 > Size: 61	Spare Weight: 0
+Queue 3 > Size: 27	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		1,		181,		189,		8,		-0.0362,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		2,		60,		61,		1,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		3,		26,		27,		1,		-0.0052,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 181	Spare Weight: 0
+Queue 2 > Size: 60	Spare Weight: 0
+Queue 3 > Size: 26	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		1,		173,		189,		16,		-0.0346,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		2,		59,		61,		2,		-0.0118,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		3,		25,		27,		2,		-0.005,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 173	Spare Weight: 0
+Queue 2 > Size: 59	Spare Weight: 0
+Queue 3 > Size: 25	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		1,		165,		189,		24,		-0.033,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		2,		58,		61,		3,		-0.0116,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739789,		3,		24,		27,		3,		-0.0048,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 165	Spare Weight: 0
+Queue 2 > Size: 58	Spare Weight: 0
+Queue 3 > Size: 24	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739790,		1,		157,		189,		32,		-0.0314,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739790,		2,		57,		61,		4,		-0.0114,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739790,		3,		23,		27,		4,		-0.0046,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 157	Spare Weight: 0
+Queue 2 > Size: 57	Spare Weight: 0
+Queue 3 > Size: 23	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739792,		1,		149,		189,		40,		-0.0298,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739792,		2,		56,		61,		5,		-0.0112,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739792,		3,		22,		27,		5,		-0.0044,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 149	Spare Weight: 0
+Queue 2 > Size: 56	Spare Weight: 0
+Queue 3 > Size: 22	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739793,		1,		142,		190,		48,		-0.0284,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739793,		2,		55,		61,		6,		-0.011,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739793,		3,		21,		27,		6,		-0.0042,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 142	Spare Weight: 0
+Queue 2 > Size: 55	Spare Weight: 0
+Queue 3 > Size: 21	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739794,		1,		134,		190,		56,		-0.0268,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739794,		2,		54,		61,		7,		-0.0108,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739794,		3,		20,		27,		7,		-0.004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 134	Spare Weight: 0
+Queue 2 > Size: 54	Spare Weight: 0
+Queue 3 > Size: 20	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		1,		126,		190,		64,		-0.0252,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		2,		53,		61,		8,		-0.0106,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		3,		19,		27,		8,		-0.0038,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 126	Spare Weight: 0
+Queue 2 > Size: 53	Spare Weight: 0
+Queue 3 > Size: 19	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		1,		118,		190,		72,		-0.0236,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		2,		54,		63,		9,		-0.0108,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941739797,		3,		18,		27,		9,		-0.0036,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 118	Spare Weight: 0
+Queue 2 > Size: 54	Spare Weight: 0
+Queue 3 > Size: 18	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740281,		1,		147,		227,		80,		-0.0294,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740281,		2,		62,		72,		10,		-0.0124,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740281,		3,		20,		30,		10,		-0.004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 147	Spare Weight: 0
+Queue 2 > Size: 62	Spare Weight: 0
+Queue 3 > Size: 20	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		1,		139,		227,		88,		-0.0278,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		2,		61,		72,		11,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		3,		19,		30,		11,		-0.0038,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 139	Spare Weight: 0
+Queue 2 > Size: 61	Spare Weight: 0
+Queue 3 > Size: 19	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		1,		131,		227,		96,		-0.0262,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		2,		60,		72,		12,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		3,		18,		30,		12,		-0.0036,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 131	Spare Weight: 0
+Queue 2 > Size: 60	Spare Weight: 0
+Queue 3 > Size: 18	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		1,		123,		227,		104,		-0.0246,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		2,		59,		72,		13,		-0.0118,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740291,		3,		17,		30,		13,		-0.0034,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 123	Spare Weight: 0
+Queue 2 > Size: 59	Spare Weight: 0
+Queue 3 > Size: 17	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		1,		115,		227,		112,		-0.023,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		2,		58,		72,		14,		-0.0116,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		3,		16,		30,		14,		-0.0032,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 115	Spare Weight: 0
+Queue 2 > Size: 58	Spare Weight: 0
+Queue 3 > Size: 16	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		1,		107,		227,		120,		-0.0214,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		2,		57,		72,		15,		-0.0114,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740292,		3,		15,		30,		15,		-0.003,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 107	Spare Weight: 0
+Queue 2 > Size: 57	Spare Weight: 0
+Queue 3 > Size: 15	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740294,		1,		99,		227,		128,		-0.0198,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740294,		2,		56,		72,		16,		-0.0112,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740294,		3,		14,		30,		16,		-0.0028,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 99	Spare Weight: 0
+Queue 2 > Size: 56	Spare Weight: 0
+Queue 3 > Size: 14	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740295,		1,		91,		227,		136,		-0.0182,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740295,		2,		55,		72,		17,		-0.011,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740295,		3,		13,		30,		17,		-0.0026,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 91	Spare Weight: 0
+Queue 2 > Size: 55	Spare Weight: 0
+Queue 3 > Size: 13	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740297,		1,		83,		227,		144,		-0.0166,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740297,		2,		54,		72,		18,		-0.0108,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740297,		3,		12,		30,		18,		-0.0024,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 83	Spare Weight: 0
+Queue 2 > Size: 54	Spare Weight: 0
+Queue 3 > Size: 12	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740298,		1,		75,		227,		152,		-0.015,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740298,		2,		53,		72,		19,		-0.0106,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740298,		3,		11,		30,		19,		-0.0022,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 75	Spare Weight: 0
+Queue 2 > Size: 53	Spare Weight: 0
+Queue 3 > Size: 11	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740791,		1,		108,		268,		160,		-0.0216,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740791,		2,		65,		85,		20,		-0.013,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740791,		3,		17,		37,		20,		-0.0034,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 108	Spare Weight: 0
+Queue 2 > Size: 65	Spare Weight: 0
+Queue 3 > Size: 17	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		1,		100,		268,		168,		-0.02,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		2,		64,		85,		21,		-0.0128,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		3,		16,		37,		21,		-0.0032,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 100	Spare Weight: 0
+Queue 2 > Size: 64	Spare Weight: 0
+Queue 3 > Size: 16	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		1,		92,		268,		176,		-0.0184,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		2,		63,		85,		22,		-0.0126,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		3,		15,		37,		22,		-0.003,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 92	Spare Weight: 0
+Queue 2 > Size: 63	Spare Weight: 0
+Queue 3 > Size: 15	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		1,		84,		268,		184,		-0.0168,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		2,		62,		85,		23,		-0.0124,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740792,		3,		14,		37,		23,		-0.0028,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 84	Spare Weight: 0
+Queue 2 > Size: 62	Spare Weight: 0
+Queue 3 > Size: 14	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		1,		76,		268,		192,		-0.0152,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		2,		61,		85,		24,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		3,		13,		37,		24,		-0.0026,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 76	Spare Weight: 0
+Queue 2 > Size: 61	Spare Weight: 0
+Queue 3 > Size: 13	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		1,		69,		269,		200,		-0.0138,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		2,		60,		85,		25,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740793,		3,		12,		37,		25,		-0.0024,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 69	Spare Weight: 0
+Queue 2 > Size: 60	Spare Weight: 0
+Queue 3 > Size: 12	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740794,		1,		61,		269,		208,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740794,		2,		59,		85,		26,		-0.0118,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740794,		3,		11,		37,		26,		-0.0022,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 61	Spare Weight: 0
+Queue 2 > Size: 59	Spare Weight: 0
+Queue 3 > Size: 11	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740795,		1,		53,		269,		216,		-0.0106,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740795,		2,		58,		85,		27,		-0.0116,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740795,		3,		10,		37,		27,		-0.002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 53	Spare Weight: 0
+Queue 2 > Size: 58	Spare Weight: 0
+Queue 3 > Size: 10	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		1,		45,		269,		224,		-0.009,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		2,		57,		85,		28,		-0.0114,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		3,		9,		37,		28,		-0.0018,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 45	Spare Weight: 0
+Queue 2 > Size: 57	Spare Weight: 0
+Queue 3 > Size: 9	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		1,		37,		269,		232,		-0.0074,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		2,		56,		85,		29,		-0.0112,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941740798,		3,		8,		37,		29,		-0.0016,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 37	Spare Weight: 0
+Queue 2 > Size: 56	Spare Weight: 0
+Queue 3 > Size: 8	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741287,		1,		60,		300,		240,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741287,		2,		61,		91,		30,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741287,		3,		8,		38,		30,		-0.0016,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 60	Spare Weight: 0
+Queue 2 > Size: 61	Spare Weight: 0
+Queue 3 > Size: 8	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		1,		52,		300,		248,		-0.0104,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		2,		60,		91,		31,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		3,		7,		38,		31,		-0.0014,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 52	Spare Weight: 0
+Queue 2 > Size: 60	Spare Weight: 0
+Queue 3 > Size: 7	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		1,		44,		300,		256,		-0.0088,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		2,		59,		91,		32,		-0.0118,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		3,		6,		38,		32,		-0.0012,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 44	Spare Weight: 0
+Queue 2 > Size: 59	Spare Weight: 0
+Queue 3 > Size: 6	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		1,		36,		300,		264,		-0.0072,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		2,		58,		91,		33,		-0.0116,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741293,		3,		5,		38,		33,		-0.001,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 36	Spare Weight: 0
+Queue 2 > Size: 58	Spare Weight: 0
+Queue 3 > Size: 5	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		1,		28,		300,		272,		-0.0056,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		2,		57,		91,		34,		-0.0114,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		3,		4,		38,		34,		-0.0008,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 28	Spare Weight: 0
+Queue 2 > Size: 57	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		1,		22,		302,		280,		-0.0044,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		2,		56,		91,		35,		-0.0112,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741294,		3,		3,		38,		35,		-0.0006,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 22	Spare Weight: 0
+Queue 2 > Size: 56	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741295,		1,		15,		303,		288,		-0.003,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741295,		2,		55,		91,		36,		-0.011,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741295,		3,		2,		38,		36,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 15	Spare Weight: 0
+Queue 2 > Size: 55	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741296,		1,		7,		303,		296,		-0.0014,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741296,		2,		54,		91,		37,		-0.0108,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741296,		3,		1,		38,		37,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 7	Spare Weight: 0
+Queue 2 > Size: 54	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741298,		1,		0,		303,		303,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741298,		2,		53,		91,		38,		-0.0106,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741298,		3,		0,		38,		38,		0.001,		0
+Weights: 0.832859, 0.14936, 0.0177813
+Queue 1 > Size: 0	Spare Weight: 0.0165017
+Queue 2 > Size: 53	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.131579
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741299,		1,		0,		303,		303,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741299,		2,		51,		91,		40,		-0.0102,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741299,		3,		0,		38,		38,		0.001,		0
+Weights: 0.832859, 0.14936, 0.0177813
+Queue 1 > Size: 0	Spare Weight: 0.0165017
+Queue 2 > Size: 51	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.131579
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741779,		1,		38,		341,		303,		-0.0076,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741779,		2,		61,		103,		42,		-0.0122,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741779,		3,		4,		42,		38,		-0.0008,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 38	Spare Weight: 0
+Queue 2 > Size: 61	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		1,		30,		341,		311,		-0.006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		2,		60,		103,		43,		-0.012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		3,		3,		42,		39,		-0.0006,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 30	Spare Weight: 0
+Queue 2 > Size: 60	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		1,		22,		341,		319,		-0.0044,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		2,		59,		103,		44,		-0.0118,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		3,		2,		42,		40,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 22	Spare Weight: 0
+Queue 2 > Size: 59	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		1,		14,		341,		327,		-0.0028,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		2,		58,		103,		45,		-0.0116,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741794,		3,		1,		42,		41,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 14	Spare Weight: 0
+Queue 2 > Size: 58	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		1,		6,		341,		335,		-0.0012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		2,		57,		103,		46,		-0.0114,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		3,		0,		42,		42,		0.001,		0
+Weights: 0.839683, 0.139683, 0.0206349
+Queue 1 > Size: 6	Spare Weight: 0
+Queue 2 > Size: 57	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		1,		0,		341,		341,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		2,		55,		103,		48,		-0.011,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		3,		0,		42,		42,		0.001,		0
+Weights: 0.829907, 0.14457, 0.0255225
+Queue 1 > Size: 0	Spare Weight: 0.0146628
+Queue 2 > Size: 55	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		1,		0,		341,		341,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		2,		53,		103,		50,		-0.0106,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741795,		3,		0,		42,		42,		0.001,		0
+Weights: 0.829907, 0.14457, 0.0255225
+Queue 1 > Size: 0	Spare Weight: 0.0146628
+Queue 2 > Size: 53	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741797,		1,		0,		341,		341,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741797,		2,		51,		103,		52,		-0.0102,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741797,		3,		0,		42,		42,		0.001,		0
+Weights: 0.829907, 0.14457, 0.0255225
+Queue 1 > Size: 0	Spare Weight: 0.0146628
+Queue 2 > Size: 51	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741799,		1,		0,		341,		341,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741799,		2,		49,		103,		54,		-0.0098,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741799,		3,		0,		42,		42,		0.001,		0
+Weights: 0.829907, 0.14457, 0.0255225
+Queue 1 > Size: 0	Spare Weight: 0.0146628
+Queue 2 > Size: 49	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741800,		1,		0,		341,		341,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741800,		2,		47,		103,		56,		-0.0094,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941741800,		3,		0,		42,		42,		0.001,		0
+Weights: 0.829907, 0.14457, 0.0255225
+Queue 1 > Size: 0	Spare Weight: 0.0146628
+Queue 2 > Size: 47	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.119048
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742287,		1,		41,		375,		341,		-0.0068,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742287,		2,		54,		109,		58,		-0.0102,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742287,		3,		3,		43,		42,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 41	Spare Weight: 0
+Queue 2 > Size: 54	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		1,		33,		375,		349,		-0.0052,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		2,		53,		108,		59,		-0.0098,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		3,		2,		43,		43,		0.001,		2000
+Weights: 0.83876, 0.13876, 0.0224806
+Queue 1 > Size: 33	Spare Weight: 0
+Queue 2 > Size: 53	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.116279
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		1,		24,		375,		358,		-0.0034,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		2,		51,		108,		61,		-0.0094,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		3,		1,		43,		44,		0.0002,		5000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 24	Spare Weight: 0
+Queue 2 > Size: 51	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		1,		16,		375,		366,		-0.0018,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		2,		50,		108,		62,		-0.0092,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.815504, 0.115504, 0.0689922
+Queue 1 > Size: 16	Spare Weight: 0
+Queue 2 > Size: 50	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		1,		7,		375,		375,		0.001,		7000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		2,		48,		108,		64,		-0.0088,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742295,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.815504, 0.115504, 0.0689922
+Queue 1 > Size: 7	Spare Weight: 0
+Queue 2 > Size: 48	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		1,		0,		375,		382,		0.0014,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		2,		46,		108,		66,		-0.0084,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.803059, 0.121726, 0.0752145
+Queue 1 > Size: 0	Spare Weight: 0.0186667
+Queue 2 > Size: 46	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		1,		0,		375,		382,		0.0014,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		2,		44,		108,		68,		-0.008,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742296,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.803059, 0.121726, 0.0752145
+Queue 1 > Size: 0	Spare Weight: 0.0186667
+Queue 2 > Size: 44	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742297,		1,		0,		375,		382,		0.0014,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742297,		2,		42,		108,		70,		-0.0076,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742297,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.803059, 0.121726, 0.0752145
+Queue 1 > Size: 0	Spare Weight: 0.0186667
+Queue 2 > Size: 42	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742299,		1,		0,		375,		382,		0.0014,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742299,		2,		40,		108,		72,		-0.0072,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742299,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.803059, 0.121726, 0.0752145
+Queue 1 > Size: 0	Spare Weight: 0.0186667
+Queue 2 > Size: 40	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742300,		1,		0,		375,		382,		0.0014,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742300,		2,		38,		108,		74,		-0.0068,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742300,		3,		0,		43,		45,		0.0004,		0
+Weights: 0.803059, 0.121726, 0.0752145
+Queue 1 > Size: 0	Spare Weight: 0.0186667
+Queue 2 > Size: 38	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0465116
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742769,		1,		23,		365,		382,		0.0034,		6764.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742769,		2,		49,		107,		76,		-0.0062,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742769,		3,		4,		41,		45,		0.0008,		5000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 23	Spare Weight: 0
+Queue 2 > Size: 49	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		1,		15,		362,		390,		0.0056,		2678.57
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		2,		48,		107,		77,		-0.006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		3,		3,		41,		46,		0.001,		3000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 15	Spare Weight: 0
+Queue 2 > Size: 48	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		1,		7,		362,		398,		0.0072,		972.222
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		2,		47,		107,		78,		-0.0058,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		3,		2,		41,		47,		0.0012,		1666.67
+Weights: 0.782482, 0.18193, 0.0355882
+Queue 1 > Size: 7	Spare Weight: 0.0994475
+Queue 2 > Size: 47	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.146341
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		2,		45,		107,		80,		-0.0054,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		3,		1,		41,		48,		0.0014,		714.286
+Weights: 0.777721, 0.196505, 0.0257737
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 45	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0.170732
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		2,		43,		107,		82,		-0.005,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 43	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		2,		40,		107,		85,		-0.0044,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742796,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 40	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		2,		37,		107,		88,		-0.0038,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 37	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		2,		34,		107,		91,		-0.0032,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742797,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 34	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742799,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742799,		2,		31,		106,		94,		-0.0024,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742799,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 31	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742800,		1,		0,		362,		405,		0.0086,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742800,		2,		28,		106,		97,		-0.0018,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941742800,		3,		0,		41,		49,		0.0016,		0
+Weights: 0.785851, 0.204635, 0.00951354
+Queue 1 > Size: 0	Spare Weight: 0.118785
+Queue 2 > Size: 28	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.195122
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743296,		1,		30,		359,		405,		0.0092,		3260.87
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743296,		2,		38,		110,		100,		-0.002,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743296,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.826816, 0.173184, 0
+Queue 1 > Size: 30	Spare Weight: 0
+Queue 2 > Size: 38	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		21,		359,		414,		0.011,		1909.09
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		36,		110,		102,		-0.0016,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.768071, 0.231929, 0
+Queue 1 > Size: 21	Spare Weight: 0.153203
+Queue 2 > Size: 36	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		13,		359,		422,		0.0126,		1031.75
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		33,		110,		105,		-0.001,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.759033, 0.240967, 0
+Queue 1 > Size: 13	Spare Weight: 0.175487
+Queue 2 > Size: 33	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		5,		359,		430,		0.0142,		352.113
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		30,		110,		108,		-0.0004,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.749861, 0.250139, 0
+Queue 1 > Size: 5	Spare Weight: 0.197772
+Queue 2 > Size: 30	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		27,		110,		111,		0.0002,		135000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 27	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		24,		110,		114,		0.0008,		30000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 24	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		21,		110,		117,		0.0014,		15000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 21	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		2,		18,		110,		120,		0.002,		9000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743297,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 18	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743299,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743299,		2,		15,		110,		123,		0.0026,		5769.23
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743299,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 15	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743300,		1,		0,		359,		435,		0.0152,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743300,		2,		12,		110,		126,		0.0032,		3750
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743300,		3,		2,		39,		49,		0.002,		1000
+Weights: 0.744059, 0.255941, 0
+Queue 1 > Size: 0	Spare Weight: 0.211699
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.25641
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743797,		1,		38,		361,		435,		0.0148,		2567.57
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743797,		2,		17,		109,		129,		0.004,		4250
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743797,		3,		4,		36,		49,		0.0026,		1538.46
+Weights: 0.806818, 0.193182, 0
+Queue 1 > Size: 38	Spare Weight: 0
+Queue 2 > Size: 17	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0.361111
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		1,		29,		361,		444,		0.0166,		1746.99
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		2,		15,		109,		131,		0.0044,		3409.09
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		3,		4,		36,		49,		0.0026,		1538.46
+Weights: 0.720883, 0.279117, 0
+Queue 1 > Size: 29	Spare Weight: 0.229917
+Queue 2 > Size: 15	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0.361111
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		1,		21,		361,		452,		0.0182,		1153.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		2,		12,		109,		134,		0.005,		2400
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		3,		4,		36,		49,		0.0026,		1538.46
+Weights: 0.711941, 0.288059, 0
+Queue 1 > Size: 21	Spare Weight: 0.252078
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0.361111
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		1,		13,		361,		460,		0.0198,		656.566
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		2,		9,		109,		137,		0.0056,		1607.14
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		3,		4,		36,		49,		0.0026,		1538.46
+Weights: 0.823172, 0.140529, 0.0362989
+Queue 1 > Size: 13	Spare Weight: 0.274238
+Queue 2 > Size: 9	Spare Weight: 0.256881
+Queue 3 > Size: 4	Spare Weight: 0.361111
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		1,		4,		361,		469,		0.0216,		185.185
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		2,		7,		109,		139,		0.006,		1166.67
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743798,		3,		3,		36,		50,		0.0028,		1071.43
+Weights: 0.821927, 0.145866, 0.0322069
+Queue 1 > Size: 4	Spare Weight: 0.299169
+Queue 2 > Size: 7	Spare Weight: 0.275229
+Queue 3 > Size: 3	Spare Weight: 0.388889
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		1,		0,		361,		473,		0.0224,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		2,		5,		109,		141,		0.0064,		781.25
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		3,		2,		36,		51,		0.003,		666.667
+Weights: 0.829915, 0.146587, 0.023498
+Queue 1 > Size: 0	Spare Weight: 0.310249
+Queue 2 > Size: 5	Spare Weight: 0.293578
+Queue 3 > Size: 2	Spare Weight: 0.416667
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		1,		0,		361,		473,		0.0224,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		2,		3,		109,		143,		0.0068,		441.176
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		3,		1,		36,		52,		0.0032,		312.5
+Weights: 0.845291, 0.143614, 0.0110957
+Queue 1 > Size: 0	Spare Weight: 0.310249
+Queue 2 > Size: 3	Spare Weight: 0.311927
+Queue 3 > Size: 1	Spare Weight: 0.444444
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		1,		0,		361,		473,		0.0224,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		2,		1,		109,		145,		0.0072,		138.889
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743799,		3,		0,		36,		53,		0.0034,		0
+Weights: 0.859543, 0.140457, 0
+Queue 1 > Size: 0	Spare Weight: 0.310249
+Queue 2 > Size: 1	Spare Weight: 0.330275
+Queue 3 > Size: 0	Spare Weight: 0.472222
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		1,		0,		361,		473,		0.0224,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		2,		0,		109,		146,		0.0074,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		3,		0,		36,		53,		0.0034,		0
+Weights: 0.863724, 0.134524, 0.00175147
+Queue 1 > Size: 0	Spare Weight: 0.310249
+Queue 2 > Size: 0	Spare Weight: 0.33945
+Queue 3 > Size: 0	Spare Weight: 0.472222
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		1,		0,		361,		473,		0.0224,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		2,		0,		109,		146,		0.0074,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941743800,		3,		0,		36,		53,		0.0034,		0
+Weights: 0.863724, 0.134524, 0.00175147
+Queue 1 > Size: 0	Spare Weight: 0.310249
+Queue 2 > Size: 0	Spare Weight: 0.33945
+Queue 3 > Size: 0	Spare Weight: 0.472222
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744286,		1,		49,		367,		473,		0.0212,		2311.32
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744286,		2,		9,		104,		146,		0.0084,		1071.43
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744286,		3,		8,		40,		53,		0.0026,		3076.92
+Weights: 0.799342, 0, 0.200658
+Queue 1 > Size: 49	Spare Weight: 0
+Queue 2 > Size: 9	Spare Weight: 0.403846
+Queue 3 > Size: 8	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		1,		41,		366,		481,		0.023,		1782.61
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		2,		9,		104,		146,		0.0084,		1071.43
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		3,		5,		37,		56,		0.0038,		1315.79
+Weights: 0.893642, 0.106358, 0
+Queue 1 > Size: 41	Spare Weight: 0.314208
+Queue 2 > Size: 9	Spare Weight: 0.403846
+Queue 3 > Size: 5	Spare Weight: 0.513514
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		1,		32,		366,		490,		0.0248,		1290.32
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		2,		7,		104,		148,		0.0088,		795.455
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		3,		5,		37,		56,		0.0038,		1315.79
+Weights: 0.886332, 0.102052, 0.0116159
+Queue 1 > Size: 32	Spare Weight: 0.338798
+Queue 2 > Size: 7	Spare Weight: 0.423077
+Queue 3 > Size: 5	Spare Weight: 0.513514
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		1,		23,		366,		499,		0.0266,		864.662
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		2,		5,		104,		150,		0.0092,		543.478
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744299,		3,		4,		37,		57,		0.004,		1000
+Weights: 0.885357, 0.106438, 0.00820486
+Queue 1 > Size: 23	Spare Weight: 0.363388
+Queue 2 > Size: 5	Spare Weight: 0.442308
+Queue 3 > Size: 4	Spare Weight: 0.540541
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		14,		366,		508,		0.0284,		492.958
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		3,		104,		152,		0.0096,		312.5
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		3,		37,		58,		0.0042,		714.286
+Weights: 0.884383, 0.110823, 0.00479382
+Queue 1 > Size: 14	Spare Weight: 0.387978
+Queue 2 > Size: 3	Spare Weight: 0.461538
+Queue 3 > Size: 3	Spare Weight: 0.567568
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		5,		366,		517,		0.0302,		165.563
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		1,		104,		154,		0.01,		100
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		2,		37,		59,		0.0044,		454.545
+Weights: 0.883409, 0.115208, 0.00138278
+Queue 1 > Size: 5	Spare Weight: 0.412568
+Queue 2 > Size: 1	Spare Weight: 0.480769
+Queue 3 > Size: 2	Spare Weight: 0.594595
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		0,		366,		522,		0.0312,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		0,		104,		155,		0.0102,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		1,		37,		60,		0.0046,		217.391
+Weights: 0.878716, 0.121284, 0
+Queue 1 > Size: 0	Spare Weight: 0.42623
+Queue 2 > Size: 0	Spare Weight: 0.490385
+Queue 3 > Size: 1	Spare Weight: 0.621622
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		0,		366,		522,		0.0312,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		0,		104,		155,		0.0102,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		1,		37,		60,		0.0046,		217.391
+Weights: 0.878716, 0.121284, 0
+Queue 1 > Size: 0	Spare Weight: 0.42623
+Queue 2 > Size: 0	Spare Weight: 0.490385
+Queue 3 > Size: 1	Spare Weight: 0.621622
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		0,		366,		522,		0.0312,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		0,		104,		155,		0.0102,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		1,		37,		60,		0.0046,		217.391
+Weights: 0.878716, 0.121284, 0
+Queue 1 > Size: 0	Spare Weight: 0.42623
+Queue 2 > Size: 0	Spare Weight: 0.490385
+Queue 3 > Size: 1	Spare Weight: 0.621622
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		1,		0,		366,		522,		0.0312,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		2,		0,		104,		155,		0.0102,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744300,		3,		1,		37,		60,		0.0046,		217.391
+Weights: 0.878716, 0.121284, 0
+Queue 1 > Size: 0	Spare Weight: 0.42623
+Queue 2 > Size: 0	Spare Weight: 0.490385
+Queue 3 > Size: 1	Spare Weight: 0.621622
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744793,		1,		37,		371,		481,		0.022,		1681.82
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744793,		2,		15,		109,		149,		0.008,		1875
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744793,		3,		4,		37,		54,		0.0034,		1176.47
+Weights: 0.877813, 0.107337, 0.0148498
+Queue 1 > Size: 37	Spare Weight: 0.296496
+Queue 2 > Size: 15	Spare Weight: 0.366972
+Queue 3 > Size: 4	Spare Weight: 0.459459
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		1,		28,		369,		451,		0.0164,		1707.32
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		2,		13,		106,		147,		0.0082,		1585.37
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		3,		3,		36,		51,		0.003,		1000
+Weights: 0.919672, 0.0551013, 0.0252271
+Queue 1 > Size: 28	Spare Weight: 0.222222
+Queue 2 > Size: 13	Spare Weight: 0.386792
+Queue 3 > Size: 3	Spare Weight: 0.416667
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		1,		18,		369,		461,		0.0184,		978.261
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		2,		12,		106,		148,		0.0084,		1428.57
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		3,		2,		36,		52,		0.0032,		625
+Weights: 0.914009, 0.0671047, 0.0188867
+Queue 1 > Size: 18	Spare Weight: 0.249322
+Queue 2 > Size: 12	Spare Weight: 0.396226
+Queue 3 > Size: 2	Spare Weight: 0.444444
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		1,		8,		369,		471,		0.0204,		392.157
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		2,		11,		106,		149,		0.0086,		1279.07
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744800,		3,		1,		36,		53,		0.0034,		294.118
+Weights: 0.908346, 0.0791081, 0.0125462
+Queue 1 > Size: 8	Spare Weight: 0.276423
+Queue 2 > Size: 11	Spare Weight: 0.40566
+Queue 3 > Size: 1	Spare Weight: 0.472222
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		10,		106,		150,		0.0088,		1136.36
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		0,		36,		54,		0.0036,		0
+Weights: 0.906296, 0.0893048, 0.00439911
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 10	Spare Weight: 0.415094
+Queue 3 > Size: 0	Spare Weight: 0.5
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		9,		106,		151,		0.009,		1000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		0,		36,		54,		0.0036,		0
+Weights: 0.909441, 0.0830155, 0.00754376
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 9	Spare Weight: 0.424528
+Queue 3 > Size: 0	Spare Weight: 0.5
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		8,		106,		152,		0.0092,		869.565
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		1,		37,		54,		0.0034,		294.118
+Weights: 0.899072, 0.0632126, 0.0377154
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 8	Spare Weight: 0.433962
+Queue 3 > Size: 1	Spare Weight: 0.459459
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		7,		106,		153,		0.0094,		744.681
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		0,		37,		55,		0.0036,		0
+Weights: 0.911226, 0.0659323, 0.0228421
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 7	Spare Weight: 0.443396
+Queue 3 > Size: 0	Spare Weight: 0.486486
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		6,		106,		154,		0.0096,		625
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		0,		37,		55,		0.0036,		0
+Weights: 0.91437, 0.059643, 0.0259867
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 6	Spare Weight: 0.45283
+Queue 3 > Size: 0	Spare Weight: 0.486486
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		1,		0,		369,		479,		0.022,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		2,		5,		106,		155,		0.0098,		510.204
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941744801,		3,		0,		37,		55,		0.0036,		0
+Weights: 0.917515, 0.0533537, 0.0291314
+Queue 1 > Size: 0	Spare Weight: 0.298103
+Queue 2 > Size: 5	Spare Weight: 0.462264
+Queue 3 > Size: 0	Spare Weight: 0.486486
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745274,		1,		42,		376,		479,		0.0206,		2038.83
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745274,		2,		15,		109,		155,		0.0092,		1630.43
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745274,		3,		3,		38,		54,		0.0032,		937.5
+Weights: 1, 0, 0
+Queue 1 > Size: 42	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0.422018
+Queue 3 > Size: 3	Spare Weight: 0.421053
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745301,		1,		32,		374,		409,		0.007,		4571.43
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745301,		2,		15,		108,		146,		0.0076,		1973.68
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745301,		3,		3,		37,		45,		0.0016,		1875
+Weights: 0.931162, 0, 0.0688377
+Queue 1 > Size: 32	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0.351852
+Queue 3 > Size: 3	Spare Weight: 0.216216
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		22,		374,		419,		0.009,		2444.44
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		15,		108,		146,		0.0076,		1973.68
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		2,		37,		46,		0.0018,		1111.11
+Weights: 0.947677, 0, 0.0523232
+Queue 1 > Size: 22	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0.351852
+Queue 3 > Size: 2	Spare Weight: 0.243243
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		12,		374,		429,		0.011,		1090.91
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		15,		108,		146,		0.0076,		1973.68
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		1,		37,		47,		0.002,		500
+Weights: 0.909335, 0.0045418, 0.0861234
+Queue 1 > Size: 12	Spare Weight: 0.147059
+Queue 2 > Size: 15	Spare Weight: 0.351852
+Queue 3 > Size: 1	Spare Weight: 0.27027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		2,		374,		439,		0.013,		153.846
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		14,		108,		147,		0.0078,		1794.87
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.903605, 0.0162906, 0.0801044
+Queue 1 > Size: 2	Spare Weight: 0.173797
+Queue 2 > Size: 14	Spare Weight: 0.361111
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		0,		374,		441,		0.0134,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		13,		108,		148,		0.008,		1625
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.903126, 0.0119003, 0.0849734
+Queue 1 > Size: 0	Spare Weight: 0.179144
+Queue 2 > Size: 13	Spare Weight: 0.37037
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		0,		374,		441,		0.0134,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		12,		108,		149,		0.0082,		1463.41
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.906213, 0.00572747, 0.0880598
+Queue 1 > Size: 0	Spare Weight: 0.179144
+Queue 2 > Size: 12	Spare Weight: 0.37963
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		0,		374,		441,		0.0134,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		11,		108,		150,		0.0084,		1309.52
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.908894, 0, 0.0911057
+Queue 1 > Size: 0	Spare Weight: 0.179144
+Queue 2 > Size: 11	Spare Weight: 0.388889
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		0,		374,		441,		0.0134,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		11,		108,		150,		0.0084,		1309.52
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.908894, 0, 0.0911057
+Queue 1 > Size: 0	Spare Weight: 0.179144
+Queue 2 > Size: 11	Spare Weight: 0.388889
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		1,		0,		374,		441,		0.0134,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		2,		11,		108,		150,		0.0084,		1309.52
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745302,		3,		0,		37,		48,		0.0022,		0
+Weights: 0.908894, 0, 0.0911057
+Queue 1 > Size: 0	Spare Weight: 0.179144
+Queue 2 > Size: 11	Spare Weight: 0.388889
+Queue 3 > Size: 0	Spare Weight: 0.297297
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745798,		1,		26,		359,		384,		0.005,		5200
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745798,		2,		19,		104,		142,		0.0076,		2500
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745798,		3,		4,		35,		40,		0.001,		4000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 26	Spare Weight: 0
+Queue 2 > Size: 19	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		18,		358,		369,		0.0022,		8181.82
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		18,		103,		141,		0.0076,		2368.42
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		3,		34,		39,		0.001,		3000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 18	Spare Weight: 0
+Queue 2 > Size: 18	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		10,		358,		377,		0.0038,		2631.58
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		17,		103,		142,		0.0078,		2179.49
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		2,		34,		40,		0.0012,		1666.67
+Weights: 0.843931, 0.156069, 0
+Queue 1 > Size: 10	Spare Weight: 0
+Queue 2 > Size: 17	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0.176471
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		1,		358,		386,		0.0056,		178.571
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		2,		34,		40,		0.0012,		1666.67
+Weights: 0.869401, 0, 0.130599
+Queue 1 > Size: 1	Spare Weight: 0.0782123
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 2	Spare Weight: 0.176471
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		1,		0,		358,		387,		0.0058,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		2,		15,		103,		144,		0.0082,		1829.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941745803,		3,		0,		34,		42,		0.0016,		0
+Weights: 0.90299, 0, 0.0970105
+Queue 1 > Size: 0	Spare Weight: 0.0810056
+Queue 2 > Size: 15	Spare Weight: 0.398058
+Queue 3 > Size: 0	Spare Weight: 0.235294
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746301,		1,		30,		354,		324,		-0.006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746301,		2,		30,		112,		132,		0.004,		7500
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746301,		3,		5,		38,		34,		-0.0008,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 30	Spare Weight: 0
+Queue 2 > Size: 30	Spare Weight: 0
+Queue 3 > Size: 5	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		22,		354,		332,		-0.0044,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		29,		111,		133,		0.0044,		6590.91
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		4,		38,		35,		-0.0006,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 22	Spare Weight: 0
+Queue 2 > Size: 29	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		14,		354,		340,		-0.0028,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		28,		111,		134,		0.0046,		6086.96
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		3,		38,		36,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 14	Spare Weight: 0
+Queue 2 > Size: 28	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		6,		354,		348,		-0.0012,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		27,		111,		135,		0.0048,		5625
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		2,		38,		37,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 6	Spare Weight: 0
+Queue 2 > Size: 27	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		26,		111,		136,		0.005,		5200
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		1,		38,		38,		0.001,		1000
+Weights: 0.834443, 0.148568, 0.0169888
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 26	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0.131579
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		24,		111,		138,		0.0054,		4444.44
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.799356, 0.11348, 0.0871642
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 24	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		22,		111,		140,		0.0058,		3793.1
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.799356, 0.11348, 0.0871642
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 22	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		2,		20,		111,		142,		0.0062,		3225.81
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746304,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.799356, 0.11348, 0.0871642
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 20	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		2,		18,		111,		144,		0.0066,		2727.27
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.799356, 0.11348, 0.0871642
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 18	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		2,		16,		111,		146,		0.007,		2285.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746305,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.799356, 0.11348, 0.0871642
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 16	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746803,		1,		38,		354,		316,		-0.0076,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746803,		2,		24,		110,		132,		0.0044,		5454.55
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746803,		3,		3,		37,		35,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 38	Spare Weight: 0
+Queue 2 > Size: 24	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		1,		30,		354,		324,		-0.006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		2,		23,		110,		133,		0.0046,		5000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		3,		2,		37,		36,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 30	Spare Weight: 0
+Queue 2 > Size: 23	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		1,		22,		354,		332,		-0.0044,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		2,		22,		110,		134,		0.0048,		4583.33
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		3,		1,		37,		37,		0.001,		1000
+Weights: 0.845045, 0.145045, 0.00990991
+Queue 1 > Size: 22	Spare Weight: 0
+Queue 2 > Size: 22	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0.135135
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		1,		13,		354,		341,		-0.0026,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		2,		20,		110,		136,		0.0052,		3846.15
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.809009, 0.109009, 0.081982
+Queue 1 > Size: 13	Spare Weight: 0
+Queue 2 > Size: 20	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		1,		4,		354,		350,		-0.0008,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		2,		18,		110,		138,		0.0056,		3214.29
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746805,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.809009, 0.109009, 0.081982
+Queue 1 > Size: 4	Spare Weight: 0
+Queue 2 > Size: 18	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		2,		16,		110,		140,		0.006,		2666.67
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.799593, 0.113717, 0.0866901
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 16	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		2,		14,		110,		142,		0.0064,		2187.5
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.799593, 0.113717, 0.0866901
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 14	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		2,		12,		110,		144,		0.0068,		1764.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.826318, 0, 0.173682
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 12	Spare Weight: 0.309091
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		2,		12,		110,		144,		0.0068,		1764.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.826318, 0, 0.173682
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 12	Spare Weight: 0.309091
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		1,		0,		354,		354,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		2,		12,		110,		144,		0.0068,		1764.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941746806,		3,		0,		37,		38,		0.0002,		0
+Weights: 0.826318, 0, 0.173682
+Queue 1 > Size: 0	Spare Weight: 0.0141243
+Queue 2 > Size: 12	Spare Weight: 0.309091
+Queue 3 > Size: 0	Spare Weight: 0.027027
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747288,		1,		41,		355,		353,		-0.0004,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747288,		2,		17,		107,		143,		0.0072,		2361.11
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747288,		3,		4,		39,		37,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 41	Spare Weight: 0
+Queue 2 > Size: 17	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		33,		353,		321,		-0.0064,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		16,		106,		127,		0.0042,		3809.52
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		3,		38,		36,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 33	Spare Weight: 0
+Queue 2 > Size: 16	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		25,		353,		329,		-0.0048,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		15,		106,		128,		0.0044,		3409.09
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		2,		38,		37,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 25	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		17,		353,		337,		-0.0032,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		14,		106,		129,		0.0046,		3043.48
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		1,		38,		38,		0.001,		1000
+Weights: 0.84386, 0.14386, 0.0122807
+Queue 1 > Size: 17	Spare Weight: 0
+Queue 2 > Size: 14	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0.131579
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		8,		353,		346,		-0.0014,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		12,		106,		131,		0.005,		2400
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.808772, 0.108772, 0.0824561
+Queue 1 > Size: 8	Spare Weight: 0
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		0,		353,		354,		0.0002,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		10,		106,		133,		0.0054,		1851.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.841235, 0, 0.158765
+Queue 1 > Size: 0	Spare Weight: 0.00283286
+Queue 2 > Size: 10	Spare Weight: 0.254717
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		0,		353,		354,		0.0002,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		10,		106,		133,		0.0054,		1851.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.841235, 0, 0.158765
+Queue 1 > Size: 0	Spare Weight: 0.00283286
+Queue 2 > Size: 10	Spare Weight: 0.254717
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		0,		353,		354,		0.0002,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		10,		106,		133,		0.0054,		1851.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.841235, 0, 0.158765
+Queue 1 > Size: 0	Spare Weight: 0.00283286
+Queue 2 > Size: 10	Spare Weight: 0.254717
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		0,		353,		354,		0.0002,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		10,		106,		133,		0.0054,		1851.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.841235, 0, 0.158765
+Queue 1 > Size: 0	Spare Weight: 0.00283286
+Queue 2 > Size: 10	Spare Weight: 0.254717
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		1,		0,		353,		354,		0.0002,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		2,		10,		106,		133,		0.0054,		1851.85
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747307,		3,		0,		38,		39,		0.0002,		0
+Weights: 0.841235, 0, 0.158765
+Queue 1 > Size: 0	Spare Weight: 0.00283286
+Queue 2 > Size: 10	Spare Weight: 0.254717
+Queue 3 > Size: 0	Spare Weight: 0.0263158
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747783,		1,		35,		367,		353,		-0.0028,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747783,		2,		24,		108,		132,		0.0048,		5000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747783,		3,		1,		36,		38,		0.0004,		2500
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 35	Spare Weight: 0
+Queue 2 > Size: 24	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747807,		1,		27,		366,		339,		-0.0054,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747807,		2,		23,		107,		110,		0.0006,		38333.3
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747807,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.809524, 0.109524, 0.0809524
+Queue 1 > Size: 27	Spare Weight: 0
+Queue 2 > Size: 23	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		18,		366,		348,		-0.0036,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		21,		107,		112,		0.001,		21000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.809524, 0.109524, 0.0809524
+Queue 1 > Size: 18	Spare Weight: 0
+Queue 2 > Size: 21	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		9,		366,		357,		-0.0018,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		19,		107,		114,		0.0014,		13571.4
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.809524, 0.109524, 0.0809524
+Queue 1 > Size: 9	Spare Weight: 0
+Queue 2 > Size: 19	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		17,		107,		116,		0.0018,		9444.44
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 17	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		16,		108,		118,		0.002,		8000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 16	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		14,		108,		120,		0.0024,		5833.33
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 14	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		12,		108,		122,		0.0028,		4285.71
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		10,		108,		124,		0.0032,		3125
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 10	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		1,		0,		366,		366,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		2,		8,		108,		126,		0.0036,		2222.22
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941747808,		3,		0,		35,		36,		0.0002,		0
+Weights: 0.800416, 0.114078, 0.0855061
+Queue 1 > Size: 0	Spare Weight: 0.0136612
+Queue 2 > Size: 8	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0285714
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748308,		1,		36,		371,		336,		-0.007,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748308,		2,		15,		104,		99,		-0.001,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748308,		3,		5,		38,		36,		-0.0004,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 36	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0
+Queue 3 > Size: 5	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		28,		370,		344,		-0.0052,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		14,		104,		100,		-0.0008,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		4,		38,		37,		-0.0002,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 28	Spare Weight: 0
+Queue 2 > Size: 14	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		20,		370,		352,		-0.0036,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		13,		104,		101,		-0.0006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		3,		38,		38,		0.001,		3000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 20	Spare Weight: 0
+Queue 2 > Size: 13	Spare Weight: 0
+Queue 3 > Size: 3	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		12,		370,		360,		-0.002,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		12,		104,		102,		-0.0004,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		2,		38,		39,		0.0002,		10000
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 12	Spare Weight: 0
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		4,		370,		368,		-0.0004,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		11,		104,		103,		-0.0002,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		1,		38,		40,		0.0004,		2500
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 4	Spare Weight: 0
+Queue 2 > Size: 11	Spare Weight: 0
+Queue 3 > Size: 1	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		0,		370,		372,		0.0004,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		10,		104,		104,		0.001,		10000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		0,		38,		41,		0.0006,		0
+Weights: 0.822712, 0.128118, 0.0491702
+Queue 1 > Size: 0	Spare Weight: 0.00540541
+Queue 2 > Size: 10	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0789474
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		0,		370,		372,		0.0004,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		8,		104,		106,		0.0004,		20000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		0,		38,		41,		0.0006,		0
+Weights: 0.822712, 0.128118, 0.0491702
+Queue 1 > Size: 0	Spare Weight: 0.00540541
+Queue 2 > Size: 8	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0789474
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		0,		370,		372,		0.0004,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		6,		104,		108,		0.0008,		7500
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		0,		38,		41,		0.0006,		0
+Weights: 0.822712, 0.128118, 0.0491702
+Queue 1 > Size: 0	Spare Weight: 0.00540541
+Queue 2 > Size: 6	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0789474
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		1,		0,		370,		372,		0.0004,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		2,		4,		104,		110,		0.0012,		3333.33
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748309,		3,		0,		38,		41,		0.0006,		0
+Weights: 0.822712, 0.128118, 0.0491702
+Queue 1 > Size: 0	Spare Weight: 0.00540541
+Queue 2 > Size: 4	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0789474
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748310,		1,		0,		370,		372,		0.0004,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748310,		2,		2,		104,		112,		0.0016,		1250
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748310,		3,		0,		38,		41,		0.0006,		0
+Weights: 0.848353, 0.0768355, 0.0748112
+Queue 1 > Size: 0	Spare Weight: 0.00540541
+Queue 2 > Size: 2	Spare Weight: 0.0769231
+Queue 3 > Size: 0	Spare Weight: 0.0789474
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748786,		1,		36,		371,		372,		0.0002,		180000
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748786,		2,		17,		113,		112,		-0.0002,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748786,		3,		11,		48,		40,		-0.0016,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 36	Spare Weight: 0
+Queue 2 > Size: 17	Spare Weight: 0
+Queue 3 > Size: 11	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748809,		1,		28,		370,		342,		-0.0056,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748809,		2,		16,		112,		97,		-0.003,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748809,		3,		10,		47,		38,		-0.0018,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 28	Spare Weight: 0
+Queue 2 > Size: 16	Spare Weight: 0
+Queue 3 > Size: 10	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		1,		20,		370,		350,		-0.004,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		2,		15,		112,		98,		-0.0028,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		3,		9,		47,		39,		-0.0016,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 20	Spare Weight: 0
+Queue 2 > Size: 15	Spare Weight: 0
+Queue 3 > Size: 9	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		1,		12,		370,		358,		-0.0024,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		2,		14,		112,		99,		-0.0026,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		3,		8,		47,		40,		-0.0014,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 12	Spare Weight: 0
+Queue 2 > Size: 14	Spare Weight: 0
+Queue 3 > Size: 8	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		1,		4,		370,		366,		-0.0008,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		2,		13,		112,		100,		-0.0024,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748810,		3,		7,		47,		41,		-0.0012,		inf
+Weights: 0.8, 0.1, 0.1
+Queue 1 > Size: 4	Spare Weight: 0
+Queue 2 > Size: 13	Spare Weight: 0
+Queue 3 > Size: 7	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		1,		0,		370,		370,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		2,		12,		112,		101,		-0.0022,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		3,		6,		47,		42,		-0.001,		inf
+Weights: 0.790991, 0.104505, 0.104505
+Queue 1 > Size: 0	Spare Weight: 0.0135135
+Queue 2 > Size: 12	Spare Weight: 0
+Queue 3 > Size: 6	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		1,		0,		370,		370,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		2,		10,		112,		103,		-0.0018,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		3,		4,		47,		44,		-0.0006,		inf
+Weights: 0.790991, 0.104505, 0.104505
+Queue 1 > Size: 0	Spare Weight: 0.0135135
+Queue 2 > Size: 10	Spare Weight: 0
+Queue 3 > Size: 4	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		1,		0,		370,		370,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		2,		8,		112,		105,		-0.0014,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		3,		2,		47,		46,		-0.0002,		inf
+Weights: 0.790991, 0.104505, 0.104505
+Queue 1 > Size: 0	Spare Weight: 0.0135135
+Queue 2 > Size: 8	Spare Weight: 0
+Queue 3 > Size: 2	Spare Weight: 0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		1,		0,		370,		370,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		2,		6,		112,		107,		-0.001,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		3,		0,		47,		48,		0.0002,		0
+Weights: 0.798083, 0.111597, 0.0903201
+Queue 1 > Size: 0	Spare Weight: 0.0135135
+Queue 2 > Size: 6	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0212766
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		1,		0,		370,		370,		0.001,		0
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		2,		4,		112,		109,		-0.0006,		inf
+time (unix),		queue id,		queue size,		enqeue sum,		deqeue sum,		net throughput,		drain delay
+1669941748811,		3,		0,		47,		48,		0.0002,		0
+Weights: 0.798083, 0.111597, 0.0903201
+Queue 1 > Size: 0	Spare Weight: 0.0135135
+Queue 2 > Size: 4	Spare Weight: 0
+Queue 3 > Size: 0	Spare Weight: 0.0212766

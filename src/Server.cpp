@@ -7,11 +7,12 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <netdb.h>
+#include <arpa/inet.h>
 
 #include <Server.h>
 #include <Message.h>
 
-#define SERVER_HOST "localhost"
+#define SERVER_HOST "127.0.0.1"
 #define SERVER_SERVICE "51711"
 #define BUF_SIZE 1024
 #define BATCH_DELIM "*"
@@ -118,8 +119,13 @@ int Server::Bind() {
 
         setsockopt(sfd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval));
 
-        if (bind(sfd, rp->ai_addr, rp->ai_addrlen) == 0)
+        if (bind(sfd, rp->ai_addr, rp->ai_addrlen) == 0) {
+            cout << "binding" << endl;
+            char s[INET_ADDRSTRLEN] = "\0";
+            inet_ntop(AF_INET, &(rp->ai_addr), s, INET_ADDRSTRLEN);
+            printf("IP address: %s\n", s);
             break;
+        }
 
         close(sfd);
     }
