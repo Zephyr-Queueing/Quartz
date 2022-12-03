@@ -13,7 +13,7 @@
 #include <Message.h>
 
 #define SERVER_HOST "127.0.0.1"
-#define SERVER_PORT "51711"
+#define SERVER_PORT 51711
 #define BUF_SIZE 1024
 #define BATCH_DELIM "*"
 
@@ -38,6 +38,59 @@ void Server::operator()() {
     }
 }
 
+int Server::Bind() {
+    int sfd, optval = 1;
+    char buffer[BUF_SIZE];
+    struct sockaddr_in servaddr;
+    
+    if ((sfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+        perror("socket creation failed"); 
+        exit(EXIT_FAILURE); 
+    }
+
+    if (setsockopt(sfd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval)) < 0) {
+        perror("setsockopt failed"); 
+        exit(EXIT_FAILURE); 
+    }
+
+    memset(&servaddr, 0, sizeof(servaddr));
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_addr.s_addr = INADDR_ANY;
+    servaddr.sin_port = htons(SERVER_PORT);
+        
+    if (bind(sfd, (const struct sockaddr *)&servaddr, sizeof(servaddr)) < 0) {
+        perror("bind failed"); 
+        exit(EXIT_FAILURE); 
+    }
+
+    return sfd;
+}
+
+string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len,
+                      char *host, char *service) {
+    ssize_t nread;
+    char buf[BUF_SIZE];
+
+    nread = recvfrom(sfd, buf, BUF_SIZE, MSG_WAITALL,
+                     peer_addr, peer_addr_len);
+    buf[nread] = '\0';
+    if (nread == -1)
+        return nullptr;
+
+    return string(buf);
+}
+
+int Server::Parse(string data) {
+    // cout << "Received... " << data << endl;
+    int batchSize;
+    try {
+        batchSize = stoi(data);
+    } catch (...) {
+        cout << "Ignoring invalid data." << endl;
+    }
+    return batchSize;
+}
+
 void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len) {
     // cout << "Sending batch of size: " << req_batch_size << "..." << endl;
     list<Message> batch = wpq.dequeueBatch(req_batch_size);
@@ -54,34 +107,6 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
     }
 }
 
-int Server::Parse(string data) {
-    // cout << "Received... " << data << endl;
-    int batchSize;
-    try {
-        batchSize = stoi(data);
-    } catch (...) {
-        cout << "Ignoring invalid data." << endl;
-    }
-    return batchSize;
-}
-
-string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len,
-                      char *host, char *service) {
-    ssize_t nread;
-    char buf[BUF_SIZE];
-
-    nread = recvfrom(sfd, buf, BUF_SIZE, MSG_WAITALL,
-                     peer_addr, peer_addr_len);
-    buf[nread] = '\0';
-    if (nread == -1)
-        return nullptr;
-
-    getnameinfo(peer_addr, *peer_addr_len, host, NI_MAXHOST,
-                service, NI_MAXSERV, NI_NUMERICSERV);
-
-    return string(buf);
-}
-
 // void Server::PrintInfo(int sfd) {
 //     struct sockaddr_in6 serv_addr;
 //     socklen_t serv_addr_len = sizeof(serv_addr);
@@ -91,51 +116,3 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
 //     }
 //     cout << "Server listening on port: " << ntohs(serv_addr.sin6_port) << endl;
 // }
-
-int Server::Bind() {
-    int sfd, s, optval = 1;
-    struct addrinfo hints;
-    struct addrinfo *result, *rp;
-
-    memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_DGRAM;
-    hints.ai_flags = AI_PASSIVE;
-    hints.ai_protocol = IPPROTO_UDP;
-    hints.ai_canonname = NULL;
-    hints.ai_addr = NULL;
-    hints.ai_next = NULL;
-
-    s = getaddrinfo(SERVER_HOST, SERVER_PORT, &hints, &result);
-    if (s != 0) {
-        fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
-        exit(EXIT_FAILURE);
-    }
-
-    for (rp = result; rp != NULL; rp = rp->ai_next) {
-        sfd = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
-        if (sfd == -1)
-            continue;
-
-        setsockopt(sfd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval));
-
-        if (bind(sfd, rp->ai_addr, rp->ai_addrlen) == 0) {
-            cout << "binding" << endl;
-            char s[INET_ADDRSTRLEN] = "\0";
-            inet_ntop(AF_INET, &(rp->ai_addr), s, INET_ADDRSTRLEN);
-            printf("IP address: %s\n", s);
-            break;
-        }
-
-        close(sfd);
-    }
-
-    if (rp == NULL) {
-        fprintf(stderr, "Could not bind\n");
-        exit(EXIT_FAILURE);
-    }
-
-    freeaddrinfo(result);
-
-    return sfd;
-}

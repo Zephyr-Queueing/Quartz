@@ -8,7 +8,7 @@
 #include "ThreadPool.h"
 #include "Server.h"
 
-#define NUM_SERVERS 16
+#define NUM_SERVERS 1
 #define QUARTZ_LIFESPAN 60 * 60 * 24
 
 #define LOAD_RATE 0.3
