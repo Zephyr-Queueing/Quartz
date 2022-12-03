@@ -12,13 +12,8 @@
 #include <Server.h>
 #include <Message.h>
 
-<<<<<<< HEAD
 #define SERVER_HOST "127.0.0.1"
 #define SERVER_SERVICE "51711"
-=======
-#define HOSTNAME "localhost"
-#define PORT "51711"
->>>>>>> 067f110dfa8ee04281f683e4fe643401a9e640cb
 #define BUF_SIZE 1024
 #define BATCH_DELIM "*"
 
