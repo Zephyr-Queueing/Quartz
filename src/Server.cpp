@@ -12,8 +12,13 @@
 #include <Server.h>
 #include <Message.h>
 
+<<<<<<< HEAD
 #define SERVER_HOST "127.0.0.1"
 #define SERVER_SERVICE "51711"
+=======
+#define HOSTNAME "localhost"
+#define PORT "51711"
+>>>>>>> 067f110dfa8ee04281f683e4fe643401a9e640cb
 #define BUF_SIZE 1024
 #define BATCH_DELIM "*"
 
@@ -106,7 +111,7 @@ int Server::Bind() {
     hints.ai_addr = NULL;
     hints.ai_next = NULL;
 
-    s = getaddrinfo(SERVER_HOST, SERVER_SERVICE, &hints, &result);
+    s = getaddrinfo(HOSTNAME, PORT, &hints, &result);
     if (s != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
         exit(EXIT_FAILURE);
