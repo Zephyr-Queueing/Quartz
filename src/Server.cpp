@@ -30,7 +30,6 @@ void Server::operator()() {
     // PrintInfo(sfd);
     
     string data;
-    int req_batch_size;
     pair<int, int> request;
     while (true) {
         data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
@@ -46,7 +45,7 @@ void Server::FlushLastBatch() {
     for (Message const &msg : lastBatch) {
         wpq.enqueueFront(msg);
     }
-    lastBatch = list<Message>();    
+    lastBatch = list<Message>();
 }
 
 int Server::Bind() {

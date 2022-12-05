@@ -2,13 +2,13 @@
 #define WEIGHTED_PRIORITY_QUEUE_H
 
 #include <list>
-#include <queue>
+#include <deque>
 #include <Message.h>
 
 #include "DistributionModel.h"
 
 using std::list;
-using std::queue;
+using std::deque;
 
 class WeightedPriorityQueue {
   public:
@@ -22,9 +22,9 @@ class WeightedPriorityQueue {
     int size();
 
   private:
-    queue<Message> p1;
-    queue<Message> p2;
-    queue<Message> p3;
+    deque<Message> p1;
+    deque<Message> p2;
+    deque<Message> p3;
     DistributionModel &dm;
 
 };

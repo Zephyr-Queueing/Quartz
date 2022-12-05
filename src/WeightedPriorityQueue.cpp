@@ -19,8 +19,27 @@ int WeightedPriorityQueue::size() {
 }
 
 void WeightedPriorityQueue::enqueueFront(const Message &msg) {
-    // TODO
-    enqueue(msg);
+    pthread_mutex_lock(&lock);
+
+    switch(msg.priority) {
+        case 1:
+            p1.push_front(msg);
+            dm.notify(1, 1);
+            break;
+        case 2:
+            p2.push_front(msg);
+            dm.notify(2, 1);
+            break;
+        case 3:
+            p3.push_front(msg);
+            dm.notify(3, 1);
+            break;
+        default:
+            // Handle Invalid Message
+            break;
+    }
+
+    pthread_mutex_unlock(&lock);
 }
 
 void WeightedPriorityQueue::enqueue(const Message &msg) {
@@ -28,15 +47,15 @@ void WeightedPriorityQueue::enqueue(const Message &msg) {
 
     switch(msg.priority) {
         case 1:
-            p1.push(msg);
+            p1.push_back(msg);
             dm.notify(1, 1);
             break;
         case 2:
-            p2.push(msg);
+            p2.push_back(msg);
             dm.notify(2, 1);
             break;
         case 3:
-            p3.push(msg);
+            p3.push_back(msg);
             dm.notify(3, 1);
             break;
         default:
@@ -57,21 +76,21 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     for (int i = 0; i < get<0>(weights) * batchSize; i++) {
         if (p1.empty()) break;
         Message &msg = p1.front();
-        p1.pop();
+        p1.pop_front();
         batch.push_back(msg);
         dm.notify(1, -1);
     }
     for (int i = 0; i < get<1>(weights) * batchSize; i++) {
         if (p2.empty()) break;
         Message &msg = p2.front();
-        p2.pop();
+        p2.pop_front();
         batch.push_back(msg);
         dm.notify(2, -1);
     }
     for (int i = 0; i < get<2>(weights) * batchSize; i++) {
         if (p3.empty()) break;
         Message &msg = p3.front();
-        p3.pop();
+        p3.pop_front();
         batch.push_back(msg);
         dm.notify(3, -1);
     }
