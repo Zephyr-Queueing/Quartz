@@ -20,7 +20,7 @@ class Server {
 
   private:
     int Bind();
-    int Parse(string data);
+    pair<int, int> Parse(string data);
     void PrintInfo(int sfd);
     void SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len);
     string Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr_len, char *host, char *service);
