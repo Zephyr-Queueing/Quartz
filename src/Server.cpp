@@ -102,7 +102,7 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
     // cout << buf << endl;
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
     if (n < 0) {
-        perror("yee");
+        perror("Error on send");
         cerr << "ERROR in sendto" << endl;
     }
 }
