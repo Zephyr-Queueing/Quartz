@@ -18,6 +18,11 @@ int WeightedPriorityQueue::size() {
     return tmp;
 }
 
+void WeightedPriorityQueue::enqueueFront(const Message &msg) {
+    // TODO
+    enqueue(msg);
+}
+
 void WeightedPriorityQueue::enqueue(const Message &msg) {
     pthread_mutex_lock(&lock);
 

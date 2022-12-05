@@ -19,8 +19,6 @@
 
 using namespace std;
 
-list<Message> lastBatch;
-
 void Server::operator()() {
     int sfd;
     struct sockaddr_storage peer_addr;
@@ -33,17 +31,22 @@ void Server::operator()() {
     
     string data;
     int req_batch_size;
+    pair<int, int> request;
     while (true) {
         data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
-        pair<int, int> request = Parse(data);
-        int req_batch_size = request.first;
-        int last_batch_size = request.second;
-        if (last_batch_size == 0) {
-            // TODO: enqueueFailedBatch(lastBatch)
-            continue;
+        request = Parse(data);
+        if (!request.second) { // resend unprocessed batch
+            FlushLastBatch();
         }
-        SendBatch(sfd, req_batch_size, (struct sockaddr *) &peer_addr, peer_addr_len);
+        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr, peer_addr_len);
     }
+}
+
+void Server::FlushLastBatch() {
+    for (Message const &msg : lastBatch) {
+        wpq.enqueueFront(msg);
+    }
+    lastBatch = list<Message>();    
 }
 
 int Server::Bind() {
@@ -88,20 +91,20 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
     return string(buf);
 }
 
-std::pair<int,int> Server::Parse(string data) {
+std::pair<int, bool> Server::Parse(string data) {
     // cout << "Received... " << data << endl;
     int delimIndex = data.find(DELIM[1]);
     string batchSizeData = data.substr(0, delimIndex);
-    string lastBatchSizeData = data.substr(delimIndex + 1);
+    string hasProcessedBatchData = data.substr(delimIndex + 1);
     int batchSize;
-    int lastBatchSize;
+    bool hasProcessedBatch;
     try {
         batchSize = stoi(batchSizeData);
-        lastBatchSize = stoi(lastBatchSizeData);
+        hasProcessedBatch = !bool(hasProcessedBatchData == "true");
     } catch (...) {
         cout << "Ignoring invalid data." << endl;
     }
-    return pair<int,int>(batchSize, lastBatchSize);
+    return pair<int, bool>(batchSize, hasProcessedBatch);
 }
 
 void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len) {

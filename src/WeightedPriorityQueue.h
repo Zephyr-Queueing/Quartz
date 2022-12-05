@@ -15,6 +15,7 @@ class WeightedPriorityQueue {
     WeightedPriorityQueue(DistributionModel &m) : dm(m) {};
     
     void enqueue(const Message &msg);
+    void enqueueFront(const Message &msg);
 
     list<Message> dequeueBatch(int batchSize);
 
