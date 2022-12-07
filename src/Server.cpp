@@ -15,7 +15,7 @@
 #define SERVER_HOST "127.0.0.1"
 #define SERVER_PORT 51711
 #define BUF_SIZE 1024
-#define BATCH_DELIM "*"
+#define DELIM "*"
 
 using namespace std;
 
@@ -30,12 +30,23 @@ void Server::operator()() {
     // PrintInfo(sfd);
     
     string data;
-    int req_batch_size;
+    pair<int, int> request;
     while (true) {
         data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
-        req_batch_size = Parse(data);
-        SendBatch(sfd, req_batch_size, (struct sockaddr *) &peer_addr, peer_addr_len);
+        request = Parse(data);
+        if (request.second) {
+            cerr << "Batch failed - recovered with " << request.first << " messages" << endl;
+            FlushLastBatch();
+        }
+        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr, peer_addr_len);
     }
+}
+
+void Server::FlushLastBatch() {
+    for (Message const &msg : lastBatch) {
+        wpq.enqueueFront(msg);
+    }
+    lastBatch = list<Message>();
 }
 
 int Server::Bind() {
@@ -80,25 +91,31 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
     return string(buf);
 }
 
-int Server::Parse(string data) {
+std::pair<int, bool> Server::Parse(string data) {
     // cout << "Received... " << data << endl;
+    int delimIndex = data.find(DELIM[1]);
+    string batchSizeData = data.substr(0, delimIndex);
+    string hasProcessedBatchData = data.substr(delimIndex + 1);
     int batchSize;
+    bool lastBatchStatus;
     try {
-        batchSize = stoi(data);
+        batchSize = stoi(batchSizeData);
+        lastBatchStatus = bool(hasProcessedBatchData == "1");
     } catch (...) {
         cout << "Ignoring invalid data." << endl;
     }
-    return batchSize;
+    return pair<int, bool>(batchSize, lastBatchStatus);
 }
 
 void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, socklen_t peer_addr_len) {
     // cout << "Sending batch of size: " << req_batch_size << "..." << endl;
     list<Message> batch = wpq.dequeueBatch(req_batch_size);
+    lastBatch = batch;
     string buf;
     for (Message msg : batch) {
         buf.append(msg.serialize());
     }
-    buf.append(BATCH_DELIM);
+    buf.append(DELIM);
     // cout << buf << endl;
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
     if (n < 0) {
