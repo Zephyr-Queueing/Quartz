@@ -19,6 +19,7 @@
 #endif
 
 #define SAFE_SUB(x, y) (x - y == 0 ? 0.001 : x - y)
+#define SAFE_ADD(x, y) (x + y == 0 ? 0.001 : x + y)
 
 using std::tuple;
 using chrono::milliseconds;
@@ -101,10 +102,18 @@ void Zephyr::notify(int qid, int delta) {
 double Zephyr::estimateSpareWeight(int qid, const tuple<int, int, int> &sizes) {
     const tuple<int, int, int> &ms = movingSums[qid - 1];
 
-    // Compute net queue throughput.
-    double enqueueRate = (double) get<1>(ms) / MAX_WINDOW;
-    double dequeueRate = (double) get<2>(ms) / MAX_WINDOW;
-    double netThroughput = SAFE_SUB(dequeueRate, enqueueRate);
+    // Compute net queue throughput for qid queue.
+    double netThroughput = SAFE_SUB((double) get<2>(ms),
+                                    (double) get<1>(ms)) / MAX_WINDOW;
+
+    // Compute enqueue rate over all queues.
+    double enqueueRateAll = SAFE_ADD(
+                                SAFE_ADD(
+                                    (double) get<1>(movingSums[0]),
+                                    (double) get<1>(movingSums[1])
+                                ),
+                                (double) get<1>(movingSums[2])
+                            ) / MAX_WINDOW;
 
     // Compute drain delay.
     double drainDelay;
@@ -131,16 +140,15 @@ double Zephyr::estimateSpareWeight(int qid, const tuple<int, int, int> &sizes) {
     )
 
     // netThroughput > 0 && drainDelay <= MAX_Q_DELAY -> can rebalance weights s.t. drainRate becomes 0
-    // enqueueRate * spareWeight = netThroughput => netThroughput = 0
+    // enqueueRateAll * spareWeight = netThroughput => netThroughput = 0
 
     // Return no spare weight if stressed.
     if (netThroughput <= 0 || drainDelay > MAX_Q_DELAY) {
         return 0.0;
     }
 
-    // Return well-behaved spare weight otherwise.
-    enqueueRate = max(0.001, enqueueRate);
-    return netThroughput / enqueueRate;
+    // Return spare weight otherwise.
+    return netThroughput / enqueueRateAll;
 }
 
 void Zephyr::refreshAllMovingSums() {
