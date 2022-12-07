@@ -49,22 +49,24 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     tuple<int, int, int> sizes(p1.size(), p2.size(), p3.size());
     tuple<double, double, double> weights = dm.getWeights(sizes);
 
-    for (int i = 0; i < get<0>(weights) * batchSize; i++) {
-        if (p1.empty()) break;
+    // Remove from first priority
+    for (int i = 0; i < get<0>(weights) * batchSize && !(p1.empty()); i++) {
         Message &msg = p1.front();
         p1.pop();
         batch.push_back(msg);
         dm.notify(1, -1);
     }
-    for (int i = 0; i < get<1>(weights) * batchSize; i++) {
-        if (p2.empty()) break;
+
+    // Remove from second priority
+    for (int i = 0; i < get<1>(weights) * batchSize && !(p2.empty()); i++) {
         Message &msg = p2.front();
         p2.pop();
         batch.push_back(msg);
         dm.notify(2, -1);
     }
-    for (int i = 0; i < get<2>(weights) * batchSize; i++) {
-        if (p3.empty()) break;
+
+    // Remove from third priority
+    for (int i = 0; i < get<2>(weights) * batchSize && !(p3.empty()); i++) {
         Message &msg = p3.front();
         p3.pop();
         batch.push_back(msg);

@@ -32,8 +32,6 @@ int main(int argc, char** argv) {
          << ", " << loadWeight3 << ")" << endl; 
 
     ThreadPool threadPool;
-    // Standard standard;
-    // WeightedPriorityQueue wpq(standard);
     Zephyr zephyr;
     WeightedPriorityQueue wpq(zephyr);
     tuple<double, double, double> loadDist(loadWeight1, loadWeight2, loadWeight3);   
