@@ -17,6 +17,9 @@ using namespace std;
 class Server {
   public:
     Server(WeightedPriorityQueue &w) : wpq(w) {}
+    ~Server() {
+      FlushLastBatch();
+    };
     void operator()();
 
   private:

@@ -16,6 +16,7 @@
 #define SERVER_PORT 51711
 #define BUF_SIZE 1024
 #define DELIM "*"
+#define TIMEOUT 10
 
 using namespace std;
 
@@ -50,7 +51,7 @@ void Server::FlushLastBatch() {
 }
 
 int Server::Bind() {
-    int sfd, optval = 1;
+    int sfd = 1;
     char buffer[BUF_SIZE];
     struct sockaddr_in servaddr;
     
@@ -59,9 +60,12 @@ int Server::Bind() {
         exit(EXIT_FAILURE); 
     }
 
-    if (setsockopt(sfd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval)) < 0) {
-        perror("setsockopt failed"); 
-        exit(EXIT_FAILURE); 
+    struct timeval tv;
+    tv.tv_sec = TIMEOUT;
+    tv.tv_usec = 0;
+    if (setsockopt(sfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+        cerr << "setsockopt() failed: timeout error" << endl;
+        exit(EXIT_FAILURE);
     }
 
     memset(&servaddr, 0, sizeof(servaddr));
