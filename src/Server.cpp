@@ -33,13 +33,23 @@ void Server::operator()() {
     string data;
     pair<int, int> request;
     while (true) {
-        data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
+        try {
+            data = Receive(sfd, (struct sockaddr *) &peer_addr,
+                           &peer_addr_len, peer_host, peer_service);
+        } catch (TimeoutException) { // potential worker failure
+            FlushLastBatch();
+            cout << "Flushing due to potential worker failure." << endl;
+            continue;
+        }
+        
         request = Parse(data);
-        if (request.second) {
-            cerr << "Batch failed - recovered with " << request.first << " messages" << endl;
+        if (!request.second) { // batch lost in transit
+            cout << "Flushing due to batch lost in transit." << endl;
             FlushLastBatch();
         }
-        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr, peer_addr_len);
+
+        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr,
+                    peer_addr_len);
     }
 }
 
@@ -89,8 +99,10 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
     nread = recvfrom(sfd, buf, BUF_SIZE, MSG_WAITALL,
                      peer_addr, peer_addr_len);
     buf[nread] = '\0';
-    if (nread == -1)
-        return nullptr;
+
+    if (nread == -1) {
+        throw TimeoutException();
+    }
 
     return string(buf);
 }
