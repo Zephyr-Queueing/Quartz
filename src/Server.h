@@ -30,4 +30,10 @@ class Server {
     list<Message> lastBatch;
 };
 
+struct TimeoutException : public exception {
+   const char *what() const throw () {
+      return "Timeout Exception";
+   }
+};
+
 #endif // SERVER_H

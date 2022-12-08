@@ -16,6 +16,7 @@
 #define SERVER_PORT 51711
 #define BUF_SIZE 1024
 #define DELIM "*"
+#define TIMEOUT 2
 
 using namespace std;
 
@@ -33,12 +34,23 @@ void Server::operator()() {
     int req_batch_size;
     pair<int, int> request;
     while (true) {
-        data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
+        try {
+            data = Receive(sfd, (struct sockaddr *) &peer_addr,
+                           &peer_addr_len, peer_host, peer_service);
+        } catch (TimeoutException) { // potential worker failure
+            FlushLastBatch();
+            cout << "Flushing due to potential timeout." << endl;
+            continue;
+        }
+        
         request = Parse(data);
-        if (!request.second) { // resend unprocessed batch
+        if (!request.second) { // batch lost in transit
+            cout << "Flushing due to batch lost in transit." << endl;
             FlushLastBatch();
         }
-        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr, peer_addr_len);
+
+        SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr,
+                    peer_addr_len);
     }
 }
 
@@ -64,6 +76,14 @@ int Server::Bind() {
         exit(EXIT_FAILURE); 
     }
 
+    struct timeval tv;
+    tv.tv_sec = TIMEOUT;
+    tv.tv_usec = 0;
+    if (setsockopt(sfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+        perror("setsockopt failed"); 
+        exit(EXIT_FAILURE); 
+    }
+
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = INADDR_ANY;
@@ -85,8 +105,10 @@ string Server::Receive(int sfd, struct sockaddr *peer_addr, socklen_t *peer_addr
     nread = recvfrom(sfd, buf, BUF_SIZE, MSG_WAITALL,
                      peer_addr, peer_addr_len);
     buf[nread] = '\0';
-    if (nread == -1)
-        return nullptr;
+
+    if (nread == -1) {
+        throw TimeoutException();
+    }
 
     return string(buf);
 }
