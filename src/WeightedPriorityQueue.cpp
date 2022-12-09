@@ -70,6 +70,9 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     list<Message> batch;
     pthread_mutex_lock(&lock);
 
+    chrono::milliseconds batchDequeueTime = chrono::duration_cast<chrono::milliseconds>(
+         chrono::system_clock::now().time_since_epoch());
+
     tuple<int, int, int> sizes(p1.size(), p2.size(), p3.size());
     tuple<double, double, double> weights = dm.getWeights(sizes);
 
@@ -96,10 +99,12 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     for (int i = 0; i < get<2>(weights) * batchSize && !(p3.empty()); i++) {
         Message &msg = p3.front();
         p3.pop_front();
-        msg.dequeueTime = chrono::duration_cast<chrono::milliseconds>(
-            chrono::system_clock::now().time_since_epoch());
         batch.push_back(msg);
         dm.notify(3, -1);
+    }
+
+    for (Message &msg : batch) {
+        msg.dequeueTime = batchDequeueTime;
     }
 
     pthread_mutex_unlock(&lock);
