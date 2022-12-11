@@ -10,7 +10,7 @@
 // #define DEBUG
 #define STARTUP_MSG_THRESHOLD 2
 #define MAX_WINDOW 5000 // ms
-#define MAX_Q_DELAY 2000 // ms
+#define MAX_Q_DELAY 5000 // ms
 
 #ifdef DEBUG 
 #define DEBUG_BUILD(x) x
