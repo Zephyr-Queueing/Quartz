@@ -10,7 +10,7 @@
 // #define DEBUG
 #define STARTUP_MSG_THRESHOLD 2
 #define MAX_WINDOW 5000 // ms
-#define MAX_Q_DELAY 5000 // ms
+#define MAX_Q_DELAY 10000 // ms
 
 #ifdef DEBUG 
 #define DEBUG_BUILD(x) x
@@ -64,14 +64,27 @@ tuple<double, double, double> Zephyr::getWeights(const tuple<int, int, int> &siz
     double totSpare = o1Spare + o2Spare + o3Spare;
     
     // Rebalance if one or more queues are stressed.
-    if (int(o1Spare > 0.0) +
-        int(o2Spare > 0.0) +
-        int(o3Spare > 0.0) != 0) { // 1+ stressed queues
-        get<0>(dws) += totSpare / 3.0 - o1Spare;
-        get<1>(dws) += totSpare / 3.0 - o2Spare;
-        get<2>(dws) += totSpare / 3.0 - o3Spare;
-        normalizeWeights(dws);
-    }
+    int numStressed = int(o1Spare > 0.0) +
+        	      int(o2Spare > 0.0) +
+        	      int(o3Spare > 0.0);
+
+    get<0>(dws) -= o1Spare;
+    get<1>(dws) -= o2Spare;
+    get<2>(dws) -= o3Spare;
+
+    if (numStressed == 0)
+	    return dws;
+
+    if (o1Spare == 0.0)
+	    get<0>(dws) += totSpare / numStressed;
+
+    if (o2Spare == 0.0)
+            get<1>(dws) += totSpare / numStressed;
+    
+    if (o3Spare == 0.0)
+            get<2>(dws) += totSpare / numStressed;
+
+    normalizeWeights(dws);
 
     DEBUG_BUILD(
         cout << "Weights: " << get<0>(dws) << ", "
