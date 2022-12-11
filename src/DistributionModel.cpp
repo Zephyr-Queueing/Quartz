@@ -73,10 +73,9 @@ tuple<double, double, double> Zephyr::getWeights(const tuple<int, int, int> &siz
         normalizeWeights(dws);
     }
 
-    cout << "Weights: " << get<0>(dws) << ", "
-         << get<1>(dws) << ", " << get<2>(dws) << endl;
-
     DEBUG_BUILD(
+        cout << "Weights: " << get<0>(dws) << ", "
+            << get<1>(dws) << ", " << get<2>(dws) << endl;
         cout << "Queue 1 > Size: " << get<0>(sizes)
              << "\tSpare Weight: " << o1Spare << endl;
         cout << "Queue 2 > Size: " << get<1>(sizes)

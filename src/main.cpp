@@ -9,7 +9,7 @@
 #include "Server.h"
 
 #define NUM_SERVERS 1
-#define QUARTZ_LIFESPAN 60 * 60 * 24
+#define STATS_INTERVAL 500 // ms
 
 #define LOAD_RATE 0.3
 #define LOAD_WEIGHT_ONE 0.7
@@ -22,14 +22,11 @@ static void ParseArgs(int argc, char** argv,
                       double *loadRate, double *loadWeight1,
                       double *loadWeight2, double *loadWeight3);
 static void Usage(char *cmd);
-static void PrintStats();
+static void PrintStats(WeightedPriorityQueue &wpq);
 
 int main(int argc, char** argv) {
     double loadRate, loadWeight1, loadWeight2, loadWeight3;
     ParseArgs(argc, argv, &loadRate, &loadWeight1, &loadWeight2, &loadWeight3); 
-    cout << "Load Rate and Load Weights: "
-         << loadRate << " => (" << loadWeight1 << ", " << loadWeight2
-         << ", " << loadWeight3 << ")" << endl; 
 
     ThreadPool threadPool;
     Zephyr zephyr;
@@ -41,8 +38,20 @@ int main(int argc, char** argv) {
         threadPool.QueueJob(Server(wpq));
     threadPool.Start();
 
-    // Sleep for lifepspan of Quartz
-    this_thread::sleep_for(chrono::seconds(QUARTZ_LIFESPAN));  
+    PrintStats(wpq);
+}
+
+static void PrintStats(WeightedPriorityQueue &wpq) {
+    for (;;) {
+        this_thread::sleep_for(chrono::milliseconds(STATS_INTERVAL));
+        chrono::milliseconds now = chrono::duration_cast<chrono::milliseconds>(
+                                   chrono::system_clock::now().time_since_epoch());
+        tuple<int, int, int> sizes = wpq.sizes();
+        tuple<double, double, double> weights = wpq.weights();
+        cout << now.count() << ","
+             << get<0>(sizes) << "," << get<1>(sizes) << "," << get<2>(sizes) << ","
+             << get<0>(weights) << "," << get<1>(weights) << "," << get<2>(weights) << endl;
+    }
 }
 
 static void ParseArgs(int argc, char** argv,
