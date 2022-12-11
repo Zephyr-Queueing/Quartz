@@ -80,7 +80,6 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     for (int i = 0; i < get<0>(weights) * batchSize && !(p1.empty()); i++) {
         Message &msg = p1.front();
         p1.pop_front();
-        msg.dequeueTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch());
         batch.push_back(msg);
         dm.notify(1, -1);
     }
@@ -89,8 +88,6 @@ list<Message> WeightedPriorityQueue::dequeueBatch(int batchSize) {
     for (int i = 0; i < get<1>(weights) * batchSize && !(p2.empty()); i++) {
         Message &msg = p2.front();
         p2.pop_front();
-        msg.dequeueTime = chrono::duration_cast<chrono::milliseconds>(
-            chrono::system_clock::now().time_since_epoch());
         batch.push_back(msg);
         dm.notify(2, -1);
     }
