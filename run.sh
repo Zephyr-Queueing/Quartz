@@ -7,6 +7,7 @@ fi
 
 echo "Preparing..."
 make
+mkdir log
 echo ""
 echo "..."
 echo ""
