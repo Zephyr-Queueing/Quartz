@@ -41,7 +41,8 @@ int main(int argc, char** argv) {
         threadPool.QueueJob(Server(wpq));
     threadPool.Start();
 
-    // PrintStats();    
+    // Sleep for lifepspan of Quartz
+    this_thread::sleep_for(chrono::seconds(QUARTZ_LIFESPAN));  
 }
 
 static void ParseArgs(int argc, char** argv,
@@ -70,7 +71,3 @@ static void Usage(char *cmd) {
     exit(EXIT_FAILURE);
 }
 
-static void PrintStats() {
-    this_thread::sleep_for(chrono::seconds(QUARTZ_LIFESPAN));
-    // TODO
-}
