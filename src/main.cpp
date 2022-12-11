@@ -44,9 +44,12 @@ int main(int argc, char** argv) {
 static void PrintStats(WeightedPriorityQueue &wpq) {
     for (;;) {
         this_thread::sleep_for(chrono::milliseconds(STATS_INTERVAL));
+        chrono::milliseconds now = chrono::duration_cast<chrono::milliseconds>(
+                                   chrono::system_clock::now().time_since_epoch());
         tuple<int, int, int> sizes = wpq.sizes();
         tuple<double, double, double> weights = wpq.weights();
-        cout << get<0>(sizes) << "," << get<1>(sizes) << "," << get<2>(sizes) << ","
+        cout << now.count() << ","
+             << get<0>(sizes) << "," << get<1>(sizes) << "," << get<2>(sizes) << ","
              << get<0>(weights) << "," << get<1>(weights) << "," << get<2>(weights) << endl;
     }
 }
