@@ -7,7 +7,7 @@
 #include <assert.h>
 #include <DistributionModel.h>
 
-#define DEBUG
+// #define DEBUG
 #define STARTUP_MSG_THRESHOLD 2
 #define MAX_WINDOW 5000 // ms
 #define MAX_Q_DELAY 2000 // ms
@@ -31,7 +31,6 @@ static double getQueueWeight(int qid);
 static void normalizeWeights(tuple<double, double, double> &dws);
 
 // Standard
-
 tuple<double, double, double> Standard::getWeights(const tuple<int, int, int> &sizes) {
     return tuple<double, double, double>(dw1, dw2, dw3);
 }
@@ -39,7 +38,6 @@ tuple<double, double, double> Standard::getWeights(const tuple<int, int, int> &s
 void Standard::notify(int qid, int delta) {}
 
 // Zephyr
-
 Zephyr::Zephyr() {
     captureNow();
     for (int i = 1; i <= 3; i++) {

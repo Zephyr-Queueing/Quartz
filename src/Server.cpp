@@ -35,7 +35,7 @@ void Server::operator()() {
         data = Receive(sfd, (struct sockaddr *) &peer_addr, &peer_addr_len, peer_host, peer_service);
         request = Parse(data);
         if (request.second) {
-            cerr << "Batch failed - recovered with " << request.first << " messages" << endl;
+            // cerr << "Batch failed - recovered with " << request.first << " messages" << endl;
             FlushLastBatch();
         }
         SendBatch(sfd, request.first, (struct sockaddr *) &peer_addr, peer_addr_len);
@@ -102,7 +102,7 @@ std::pair<int, bool> Server::Parse(string data) {
         batchSize = stoi(batchSizeData);
         lastBatchStatus = bool(hasProcessedBatchData == "1");
     } catch (...) {
-        cout << "Ignoring invalid data." << endl;
+        // cout << "Ignoring invalid data." << endl;
     }
     return pair<int, bool>(batchSize, lastBatchStatus);
 }
@@ -119,8 +119,8 @@ void Server::SendBatch(int sfd, int req_batch_size, struct sockaddr *peer_addr, 
     // cout << buf << endl;
     int n = sendto(sfd, buf.c_str(), buf.length(), 0, peer_addr, peer_addr_len);
     if (n < 0) {
-        perror("Error on send");
-        cerr << "ERROR in sendto" << endl;
+        // perror("Error on send");
+        // cerr << "ERROR in sendto" << endl;
     }
 }
 

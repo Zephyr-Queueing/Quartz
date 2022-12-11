@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         threadPool.QueueJob(Server(wpq));
     threadPool.Start();
 
-    PrintStats();    
+    // PrintStats();    
 }
 
 static void ParseArgs(int argc, char** argv,
