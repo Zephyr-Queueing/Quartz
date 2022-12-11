@@ -11,11 +11,15 @@ pthread_mutex_t lock;
 
 using namespace std;
 
-int WeightedPriorityQueue::size() {
+tuple<int, int, int> WeightedPriorityQueue::sizes() {
     pthread_mutex_lock(&lock);
-    int tmp = p1.size() + p2.size() + p3.size();
+    tuple<int, int, int> tmp(p1.size(), p2.size(), p3.size());
     pthread_mutex_unlock(&lock);
     return tmp;
+}
+
+tuple<double, double, double> WeightedPriorityQueue::weights() {
+    return dm.getWeights(sizes());
 }
 
 void WeightedPriorityQueue::enqueueFront(const Message &msg) {

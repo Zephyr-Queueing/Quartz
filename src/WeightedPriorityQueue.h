@@ -19,7 +19,8 @@ class WeightedPriorityQueue {
 
     list<Message> dequeueBatch(int batchSize);
 
-    int size();
+    tuple<int, int, int> sizes();
+    tuple<double, double, double> weights();
 
   private:
     deque<Message> p1;
