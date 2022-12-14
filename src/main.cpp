@@ -29,8 +29,13 @@ int main(int argc, char** argv) {
     ParseArgs(argc, argv, &loadRate, &loadWeight1, &loadWeight2, &loadWeight3); 
 
     ThreadPool threadPool;
+
+    // uncomment comment lines below to change to standard model, and vice versa
     Zephyr zephyr;
     WeightedPriorityQueue wpq(zephyr);
+    // Standard standard;
+    // WeightedPriorityQueue wpq(standard);
+
     tuple<double, double, double> loadDist(loadWeight1, loadWeight2, loadWeight3);   
 
     threadPool.QueueJob(LG(loadRate, loadDist, wpq));
